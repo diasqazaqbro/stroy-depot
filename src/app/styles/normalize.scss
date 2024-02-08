@@ -1,0 +1,79 @@
+html,
+body,
+#root,
+.app,
+#app {
+	position: relative;
+	height: 100%;
+}
+
+a {
+	color: white;
+	text-decoration: none;
+}
+
+body {
+	margin: 0;
+	background-color: var(--white);
+	font-family: Montserrat;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+h1 {
+  font-size: 46px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+h2 {
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+h3 {
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+h4 {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+.container {
+	max-width: 1280px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 120px;
+	padding-right: 120px;
+}
+
+// scrollbar
+::-webkit-scrollbar {
+	width: 8px;
+	height: 8px;
+	background-color: transparent;
+
+	&-track {
+		background-color: transparent;
+		border-radius: 5px;
+	}
+
+	&-thumb {
+		background-color: #a6b2c3;
+		border-radius: 5px;
+	}
+
+	&-corner {
+		background-color: #ffffff;
+	}
+}
