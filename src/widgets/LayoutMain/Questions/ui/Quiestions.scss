@@ -1,0 +1,24 @@
+.quest {
+  background: #F5F5F5;
+  justify-content: space-between;
+
+  &__left {
+
+    h2 {
+      color: var(--blue);
+    }
+
+    h4 {
+      color: #828282;
+      max-width: 258px;
+    }
+  }
+
+  &__right {
+
+    h4 {
+      max-width: 488px;
+      color: var(--grey);
+    }
+  }
+}

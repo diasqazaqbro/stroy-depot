@@ -1,0 +1,15 @@
+.input__inner {
+  padding: 16px 0 16px 20px;
+  border:  1px solid var(--grey);
+  max-width: 488px;
+  background: transparent;
+
+  input {
+    width: 400px;
+  }
+}
+
+.form__btn {
+  background: var(--blue);
+  color: #fff;
+}
