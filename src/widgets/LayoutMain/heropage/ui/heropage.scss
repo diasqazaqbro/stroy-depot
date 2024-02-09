@@ -1,0 +1,26 @@
+.left {
+  padding: 169px 42px 53px 30px;
+  background: var(--white);
+  width: 692px;
+
+  h1 {
+    color: var(--red);
+    max-width: 606px;
+  }
+
+  h2 {
+    max-width: 470px;
+  }
+  
+  .btn {
+    padding: 17px 62px 17px 61px;
+    background: var(--blue);
+    color: #fff;
+    font-weight: 500;
+    line-height: normal;
+  }
+}
+
+.right {
+  // background-image: url('../../../../public/right.png');
+}

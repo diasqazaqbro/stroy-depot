@@ -1,0 +1,18 @@
+.card {
+  background: #EAE9F1;
+  margin-right: 10px;
+  padding: 0;
+
+  &:first-child {
+    padding: 25px 54px;
+  }
+
+  &:nth-child(2) {
+    padding: 17px 42px;
+  }
+
+  &:last-child {
+    padding: 30px 12px;
+    margin-right: 0;
+  }
+}

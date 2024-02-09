@@ -1,0 +1,85 @@
+.product {
+  border: 1px solid var(--grey);
+  padding: 35px 25px 28px 25px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+
+  h4 {
+    animation: text-out 0.5s both;
+  }
+
+  svg {
+    animation: slide-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  }
+
+  &:hover {
+    background: var(--blue);
+    
+    h2 {
+      color: #fff;
+    }
+    h4{
+      display: block;
+      color: #fff;
+      transition: all 0.5s ease;
+      animation: text-blur-out 0.5s both;
+    }
+    svg {
+      animation: slide-right 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+      path {
+        fill: #fff;
+      }
+    }
+
+    .products__image {
+      background: #fff;
+    }
+  }
+}
+
+@keyframes slide-right {
+  0% {
+    -webkit-transform: translateX(-120px);
+            transform: translateX(-120px);
+  }
+  100% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+}
+@keyframes slide-left {
+  0% {
+    -webkit-transform: translateX(120px);
+            transform: translateX(120px);
+  }
+  100% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+}
+@keyframes text-go {
+  0% {
+    -webkit-filter: blur(0.01);
+            filter: blur(0.01);
+  }
+  100% {
+    -webkit-filter: blur(0) opacity(100%);
+            filter: blur(0) opacity(100%);
+  }
+}
+@keyframes text-out {
+  0% {
+    -webkit-filter: blur(0.01);
+            filter: blur(0.01);
+  }
+  100% {
+    -webkit-filter: blur(20px) opacity(10%);
+            filter: blur(20px) opacity(10%);
+  }
+}
+
+@media screen and (max-width: 768px)  {
+  .product {
+    margin-bottom: 20px;
+  }
+}

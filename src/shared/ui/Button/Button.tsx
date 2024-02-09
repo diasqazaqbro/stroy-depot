@@ -1,9 +1,20 @@
 import './Button.scss'
 
-export const Button = () => {
+interface IButton {
+  label: string;
+  className?: string;
+  onClick?: (event: any) => void;
+}
+
+export const Button: React.FC<IButton> = (props) => {
+  const { label, className, onClick } = props
+
   return (
-    <button className='btn'>
-      
+    <button 
+      onClick={onClick}
+      className={className}
+    >
+      {label}
     </button>
   )
 }

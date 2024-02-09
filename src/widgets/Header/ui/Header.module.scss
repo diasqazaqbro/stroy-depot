@@ -1,0 +1,20 @@
+.header {
+  display: flex;
+  // justify-content: center;
+  align-items: center;
+  padding: 21px 121px 21px 120px;
+  justify-content: space-between;
+
+  .logo {
+    color: var(--black);
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+
+  .location {
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
+}

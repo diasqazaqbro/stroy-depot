@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import "./styles/index.scss";
 
-const inter = Montserrat({ subsets: ["latin", "cyrillic"] }); 
+const montserrat = Montserrat({ subsets: ["latin", "cyrillic"] }); 
 
 export const metadata: Metadata = {
   title: "Stroy depot",
@@ -11,12 +11,12 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html>
+      <body className={montserrat.className}>{children}</body>
     </html>
   );
 }

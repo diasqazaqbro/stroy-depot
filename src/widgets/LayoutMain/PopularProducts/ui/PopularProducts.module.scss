@@ -1,0 +1,22 @@
+.section {
+  padding-top: 30px;
+  padding-bottom: 36px;
+
+  &__title {
+    color: var(--red);
+  }
+
+  h3 {
+    color: var(--blue);
+    cursor: pointer;
+  }
+}
+
+@media screen and (max-width: 815px) {
+  .section {
+
+    h3 {
+      text-align: center;
+    }
+  }
+}
