@@ -19,7 +19,7 @@ export const ProductsList = () => {
           </div>
           <h2 className="product__name mb-[13px] xl:flex xl:justify-center xl:items-center">{name}</h2>
           <div className="flex items-center">
-            <h4 className="hidden mr-[15px]">Подробнее</h4>
+            <h4 className="hidden">Подробнее</h4>
             <Arrow className="flex justify-center items-center ml-[21px]" />
           </div>
         </li>

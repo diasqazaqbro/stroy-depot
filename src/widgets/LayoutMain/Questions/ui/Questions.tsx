@@ -19,4 +19,3 @@ export const Questions = () => {
     </section>
   )
 }
-// Эщкере
