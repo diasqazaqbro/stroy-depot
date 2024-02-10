@@ -1,0 +1,23 @@
+.footer__left {
+  background: var(--blue);
+
+  h2 {
+    color: #fff;
+  }
+
+  h4 {
+    color: #fff;
+    font-weight: 300;
+    max-width: 223px;
+    white-space: nowrap;
+  }
+}
+
+.footer__right {
+  background: #F5F5F5;
+
+  .right__text {
+    color: var(--black);
+    font-weight: 600;
+  }
+}

@@ -1,0 +1,18 @@
+.contacts {
+  background: url('/Contacts.png'), no-repeat;
+
+  .address {
+    color: #9C9C9C;
+
+    &__street {
+      color: var(--black);
+      align-self: stretch;
+      font-weight: 600;
+      max-width: 162px;
+
+      &:last-child {
+        max-width: 237px;
+      }
+    }
+  }
+}
