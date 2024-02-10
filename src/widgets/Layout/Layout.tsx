@@ -1,13 +1,21 @@
 import React, { ReactNode } from 'react'
+import { Header } from './Header'
+import { Footer } from './Footer'
+import { Contacts } from '../LayoutMain/OurContacts/ui/Contacts'
 
 interface ILayout {
   children: ReactNode
 }
 
-const Layout: React.FC<ILayout> = ({ children }) => {
+export const Layout: React.FC<ILayout> = ({ children }) => {
   return (
-    <main></main>
+    <>
+      <Header />
+        <main className='main'>
+          {children}
+          <Contacts />
+        </main>
+      <Footer />
+    </>
   )
 }
-
-export default Layout
