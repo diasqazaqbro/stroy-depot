@@ -3,7 +3,7 @@ import styles from './About.module.scss'
 export const About = () => {
   return (
     <section className="container pt-10 pb-[30px]">
-      <div id='about' className={`${styles.image} rounded-[15px] pt-[95px] pr-[247px] pl-[82px] pb-[87px]`}>
+      <div id='#about' className={`${styles.image} rounded-[15px] pt-[95px] pr-[247px] pl-[82px] pb-[87px]`}>
         <div className={`${styles.image__inside} rounded-[15px] mb-5`}>
           <h2 className={styles.image__title}>ТОО STROY DEPOT - официальный дистрибьютор <span>Tytan</span>, <span>Mapei</span>, <span>Henkel</span> с опытом работы более 12 лет</h2>
           <p>Сотрудничая с мировыми производителями строительной химии,  мы предлагаем исключительно высококачественную продукцию, отвечающую всем нормам и стандартам качества ISO.</p>
