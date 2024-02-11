@@ -13,15 +13,15 @@ export const Form = () => {
   return (
     <form className="">
       <div className="input__inner mb-[15px] rounded-[50px]">
-        <Input placeholder="Как к вам обращаться" />
+        <Input placeholder="Как к вам обращаться" type="text" />
       </div>
       <div className="input__inner mb-[15px] rounded-[50px]">
-        <Input placeholder="+ 7 (XXX) XXX XX XX" />
+        <Input placeholder="+ 7 (XXX) XXX XX XX" type="tel" />
       </div>
       <div className="input__inner mb-[15px] rounded-[50px]">
-        <Input placeholder="Что вас интересует?" />
+        <Input placeholder="Что вас интересует?" type="text" />
       </div>
-      <Button label="Отправить" className="form__btn pt-4 pb-4 pl-[204px] pr-[204px] rounded-[50px] mb-[15px]" />
+      <Button label="Отправить" className="form__btn rounded-[50px] py-4 md:px-8 md:pl-[204px] md:pr-[204px] mb-[15px]" />
     </form>
   )
 }

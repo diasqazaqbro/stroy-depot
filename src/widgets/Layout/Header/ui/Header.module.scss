@@ -18,3 +18,9 @@
     align-items: flex-end;
   }
 }
+
+@media (max-width: 1023px) {
+  .location {
+    display: none;
+  }
+}

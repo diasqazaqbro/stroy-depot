@@ -4,7 +4,7 @@ import './Quiestions.scss';
 export const Questions = () => {
   return (
     <section className="container">
-      <div className="md:flex quest mt-[30px] mb-[30px] pt-20 pb-20 pl-20 pr-[102px] rounded-[15px]">
+      <div className="flex quest mt-[30px] mb-[30px] pt-20 pb-20 pl-20 pr-[102px] rounded-[15px]">
         <div className="quest__left">
           <h2 className="mb-4">Остались вопросы?</h2>
           <h4>Заполните данные, и наши 
