@@ -1,13 +1,15 @@
+import { ReactNode } from 'react';
 import './Button.scss'
 
 interface IButton {
-  label: string;
+  label?: string;
   className?: string;
   onClick?: (event: any) => void;
+  children?: ReactNode
 }
 
 export const Button: React.FC<IButton> = (props) => {
-  const { label, className, onClick } = props
+  const { label, className, onClick, children } = props
 
   return (
     <button 
@@ -15,6 +17,7 @@ export const Button: React.FC<IButton> = (props) => {
       className={className}
     >
       {label}
+      {children}
     </button>
   )
 }
