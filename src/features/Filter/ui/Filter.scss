@@ -1,12 +1,11 @@
 .checkbox__filter {
   border: 3px solid var(--blue);
-  width: 33px;
-  height: 33px;
+  // width: 33px;
+  // height: 33px;
   appearance: none;
 
   &:nth-child(3) {
-    width: 35px;
-    height: 33px;
+    padding-left: 10px;
   }
 }
 
