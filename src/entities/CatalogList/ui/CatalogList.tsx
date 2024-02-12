@@ -10,6 +10,7 @@ import {
   Miscellaneous
 } from '@/shared/ui/Icon/Icon';
 import './CatalogList.scss';
+import Link from 'next/link';
 
 export const CatalogList = () => {
   const data = [
@@ -26,12 +27,12 @@ export const CatalogList = () => {
   return (
     <div className='catalog__grid grid pt-5'>
       {data.map(({ id, name, icon, className }) => (
-        <div key={id} className='catalog__item rounded-[15px] pt-2.5 pb-5'>
+        <Link href={'/product'} key={id} className='catalog__item rounded-[15px] pt-2.5 pb-5'>
           <div className='flex justify-center items-center'>
             {icon}
           </div>
             <h3 className={className}>{name}</h3>
-        </div>
+        </Link>
       ))}
     </div>
   );
