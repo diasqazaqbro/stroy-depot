@@ -1,9 +1,9 @@
-import { Button } from "@/shared/ui/Button/Button";
-import { Input } from "@/shared/ui/Input/Input";
+import Button from "@/shared/ui/Button/Button";
+import Input from "@/shared/ui/Input/Input";
 import './Form.scss';
 // import { useState } from "react";
 
-export const Form = () => {
+export default function Form() {
   // const [input, setInput] = useState({
   //   name: '',
   //   number: '',

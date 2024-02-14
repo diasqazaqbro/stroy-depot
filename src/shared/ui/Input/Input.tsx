@@ -7,7 +7,7 @@ interface IInput {
   placeholder?: string;
 }
 
-export const Input: React.FC<IInput> = (props) => {
+export default function Input(props: IInput) {
   const { className, type, placeholder } = props
 
   return (

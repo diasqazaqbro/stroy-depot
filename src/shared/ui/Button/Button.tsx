@@ -8,7 +8,7 @@ interface IButton {
   children?: ReactNode
 }
 
-export const Button: React.FC<IButton> = (props) => {
+export default function Button(props: IButton) {
   const { label, className, onClick, children } = props
 
   return (

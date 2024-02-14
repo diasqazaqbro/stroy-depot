@@ -1,9 +1,9 @@
-import { Button } from "@/shared/ui/Button/Button";
+import Button from "@/shared/ui/Button/Button";
 import './heropage.scss';
 import Image from "next/image";
-import { Company } from "@/entities/Company/ui/Company";
+import Company from "@/entities/Company/ui/Company";
 
-export const HeroPage = () => {
+export default function HeroPage() {
 
   return (
     <section className="container flex mb-[127px]">

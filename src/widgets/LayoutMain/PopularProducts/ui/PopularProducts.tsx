@@ -1,8 +1,8 @@
-import { PopularProductsList } from "@/entities/ProductsList/ui/ProductsList"
+import PopularProductsList from "@/entities/ProductsList/ui/ProductsList"
 import Link from "next/link";
 import styles from './PopularProducts.module.scss';
 
-export const PopularProducts = () => {
+export default function PopularProducts() {
   return (
     <section className={`${styles.section} container`}>
       <h2 className={`${styles.section__title} mb-[25px]`}>Популярные товары</h2>

@@ -1,6 +1,6 @@
-import { Filter } from "@/features/Filter"
+import Filter from "@/features/Filter/ui/Filter"
 
-export const ProductFilter = () => {
+export default function ProductFilter() {
   return (
     <div className="filter mr-5">
       <h2 className="mb-10">Полиуретановые пены</h2>

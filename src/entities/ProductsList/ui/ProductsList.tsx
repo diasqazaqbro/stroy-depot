@@ -1,8 +1,8 @@
-import { Arrow } from "@/shared/ui/Icon/Icon";
 import Image from "next/image";
 import './ProductsList.scss';
+import Arrow from "@/shared/ui/Icon/icon2";
 
-export const PopularProductsList = () => {
+export default function PopularProductsList() {
   const data = [
     { id: '1', name: 'Ultra Fast 70', image: '/UltraFast700.png' },
     { id: '2', name: 'EURO Клей', image: '/Euro.png' },

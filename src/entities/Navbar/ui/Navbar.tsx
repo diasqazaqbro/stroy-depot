@@ -1,7 +1,7 @@
 import Link  from 'next/link';
 import './Navbar.scss'
 
-export const Navbar = () => {
+export default function Navbar() {
 
   return (
     <nav className="nav lg:flex lg:gap-7">

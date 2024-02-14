@@ -1,7 +1,7 @@
 import Image from "next/image";
 import './Company.scss';
 
-export const Company = () => {
+export default function Company() {
   return (
     <div className="flex mb-[68px]">
       <div className="card rounded-[10px] flex justify-center items-center">

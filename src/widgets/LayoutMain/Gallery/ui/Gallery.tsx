@@ -1,7 +1,7 @@
-import { CarouselSpacing } from "@/entities/Carousel/ui/Carousel";
+import CarouselSpacing  from "@/entities/Carousel/ui/Carousel";
 import './Gallery.scss';
 
-export const Gallery = () => {
+export default function Gallery() {
   return (
     <>
     <div className="gallery__inner">

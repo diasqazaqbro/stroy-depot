@@ -1,9 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import './ProductList.scss';
-import { Arrow2 } from "@/shared/ui/Icon/Icon";
+import Arrow2 from "@/shared/ui/Icon/icon15";
 
-export const ProductList = () => {
+export default function ProductList() {
   const data = [
     { id: '2', name: 'Ultra Fast 70', image: '/UltraFast700.png'  },
     { id: '1', name: 'Ultra Fast 70', image: '/UltraFast700.png'  },

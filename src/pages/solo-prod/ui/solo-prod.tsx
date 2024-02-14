@@ -1,4 +1,4 @@
-import { Order } from "@/features/AddTo/ui/AddTo"
+import Order from "@/features/AddTo/ui/AddTo"
 import Advantages from "@/widgets/Advantages/ui/Advantages"
 import Charach from "@/widgets/Char/ui/Charach"
 import Use from "@/widgets/Use/ui/Use"

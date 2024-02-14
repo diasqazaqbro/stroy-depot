@@ -1,5 +1,5 @@
-import { ProductsPage } from "@/pages/products"
-import { Layout } from "@/widgets/Layout/Layout"
+import ProductsPage  from "@/pages/products/ui/products"
+import Layout from "@/widgets/Layout/Layout"
 
 export default function Products() {
   return (

@@ -1,1 +1,0 @@
-export { PopularProductsList } from './ui/ProductsList'

@@ -1,7 +1,7 @@
 import React from 'react';
 import './Contacts.scss';
 
-export const Contacts = () => {
+export default function Contacts() {
   return (
     <section className='container mb-10'>
       <div id='contacts' className='contacts rounded-[15px] pt-[65px] pl-10 pb-[72px]  '>

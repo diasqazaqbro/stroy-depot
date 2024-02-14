@@ -1,7 +1,7 @@
-import { Form } from "@/entities/Form";
+import Form  from "@/entities/Form/ui/Form";
 import './Quiestions.scss';
 
-export const Questions = () => {
+export default function Questions() {
   return (
     <section className="container">
       <div className="flex quest mt-[30px] mb-[30px] pt-20 pb-20 pl-20 pr-[102px] rounded-[15px]">

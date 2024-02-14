@@ -1,16 +1,16 @@
 'use client'
 import React, { ReactNode, useState } from 'react';
-import { Header } from './Header';
-import { Footer } from './Footer';
-import { Contacts } from '../LayoutMain/OurContacts/ui/Contacts';
+import Header from './Header/ui/Header';
+import Footer from './Footer/ui/footer';
+import Contacts from '../LayoutMain/OurContacts/ui/Contacts';
+import InsideBurger from '@/entities/Burger/ui/Burger';
 import './Layout.scss';
-import { InsideBurger } from '@/entities/Burger/ui/Burger';
 
 interface ILayout {
   children: ReactNode;
 }
 
-export const Layout: React.FC<ILayout> = ({ children }) => {
+export default function Layout({ children }: ILayout){
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (

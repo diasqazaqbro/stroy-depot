@@ -1,5 +1,5 @@
-import { CatalogList } from "@/entities/CatalogList/ui/CatalogList"
-import { Goods } from "@/entities/Goods/ui/Goods"
+import CatalogList from "@/entities/CatalogList/ui/CatalogList"
+import Goods from "@/entities/Goods/ui/Goods"
 
 export default function CatalogPages() {
   return (

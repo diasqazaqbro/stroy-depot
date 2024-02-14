@@ -1,17 +1,17 @@
 'use client'
 import Link from 'next/link';
-import { MouseEvent } from 'react';
-import { Position } from '@/shared/ui/Icon/Icon';
-import { Navbar } from '@/entities/Navbar/ui/Navbar';
-import { Burger } from '@/entities/Burger';
+// import { MouseEvent } from 'react';
+import Navbar from '@/entities/Navbar/ui/Navbar';
 import styles from './Header.module.scss';
+import Burger from '@/widgets/Burger/ui/Burger';
+import Position from '@/shared/ui/Icon/icon1';
 
 interface IHeader {
   onClick?: any; 
   className?: string;
 }
 
-export const Header: React.FC<IHeader> = ({ onClick }) => {
+export default function Header({ onClick }: IHeader) {
 
   return (
     <header className={`${styles.header} container `}>

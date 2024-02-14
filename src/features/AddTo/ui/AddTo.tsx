@@ -1,15 +1,16 @@
 'use client'
 import { useCallback, useState } from "react";
-import { Button } from "@/shared/ui/Button/Button";
+import Button  from "@/shared/ui/Button/Button";
 import './AddTo.scss'
-import { Decrease, Increase } from "@/shared/ui/Icon/Icon";
+import Decrease from "@/shared/ui/Icon/icon14";
+import Increase from "@/shared/ui/Icon/icon13";
 
-export const Order = () => {
+export default function Order() {
   const [count, setCount] = useState(1)
 
-  const increaseCounter = useCallback(() => {
+  const increaseCounter = () => {
     setCount(count => count + 1);
-  }, [count])
+  }
 
   const decreaseCounter = useCallback(() => {
     if (count == 1) {

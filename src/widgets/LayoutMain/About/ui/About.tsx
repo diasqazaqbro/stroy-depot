@@ -1,6 +1,6 @@
 import styles from './About.module.scss'
 
-export const About = () => {
+export default function About() {
   return (
     <section className="container pt-10 pb-[30px]">
       <div id='about' className={`${styles.image} rounded-[15px] pt-[95px] pr-[247px] pl-[82px] pb-[87px]`}>

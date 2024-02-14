@@ -1,5 +1,5 @@
-import { SoloProd } from "@/pages/solo-prod/ui/solo-prod";
-import { Layout } from "@/widgets/Layout/Layout";
+import SoloProd  from "@/pages/solo-prod/ui/solo-prod";
+import Layout from "@/widgets/Layout/Layout";
 
 export default function ProductsCheck() {
   return (

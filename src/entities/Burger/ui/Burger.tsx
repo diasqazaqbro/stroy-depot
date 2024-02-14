@@ -1,39 +1,13 @@
 "use client"
-import { useClickAway } from "react-use";
-import { useRef } from "react";
-import { useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
-import { Squash as Hamburger } from "hamburger-react";
+import { motion } from "framer-motion";
 import { routes } from "@/features/Routes";
 import './Burger.scss'
-
-interface IBurger {
-  onClick: () => void;
-}
-
-export const Burger:  React.FC<IBurger> = ({ onClick }) => {
-  const [isOpen, setOpen] = useState(false);
-  const ref = useRef(null);
-
-  useClickAway(ref, () => setOpen(false));
-
-  return (
-    <div onClick={onClick} ref={ref} className="lg:hidden ">
-      <Hamburger toggled={isOpen} size={20} toggle={setOpen} />
-      <AnimatePresence>
-        {isOpen && (
-          <InsideBurger onClick={(prev) => setOpen(!prev)} />
-        )}
-      </AnimatePresence>
-    </div>
-  );
-};
 
 interface InsideBurger {
   onClick?: (prev: boolean) => void;
 }
 
-export const InsideBurger: React.FC<InsideBurger> = ({ onClick }) => {
+export default function InsideBurger({ onClick }: InsideBurger) {
   return (
     <motion.div
       initial={{ opacity: 0 }}

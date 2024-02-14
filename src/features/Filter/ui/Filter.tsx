@@ -1,7 +1,7 @@
-import { Input } from "@/shared/ui/Input/Input";
+import Input from "@/shared/ui/Input/Input";
 import './Filter.scss';
 
-export const Filter = () => {
+export default function Filter() {
   const data = [
     { name: 'Двери и окна',  },
     { name: 'Стены и фасады', },

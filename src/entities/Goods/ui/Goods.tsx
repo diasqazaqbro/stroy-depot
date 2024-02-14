@@ -1,6 +1,6 @@
 import './Goods.scss';
 
-export const Goods = () => {
+export default function Goods() {
   const data = [
     {name: 'Полиуретановые пены'},
     {name: 'Пено-клеи'},

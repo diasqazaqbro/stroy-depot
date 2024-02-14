@@ -11,7 +11,7 @@ import {
 
 import './Carousel.scss';
 
-export function CarouselSpacing() {
+export default function CarouselSpacing() {
   return (
     <Carousel
       opts={{

@@ -1,5 +1,5 @@
-import { ProductList } from "@/entities/ProductList"
-import { ProductFilter } from "@/widgets/Products/ui/Products"
+import ProductList from "@/entities/ProductList/ui/ProdutctList"
+import ProductFilter from "@/widgets/Products/ui/Products"
 
 export default function ProductsPage() {
   return (

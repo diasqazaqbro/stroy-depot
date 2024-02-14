@@ -1,4 +1,4 @@
-import { Allow3 } from "@/shared/ui/Icon/Icon"
+import Allow3 from "@/shared/ui/Icon/icon16"
 
 export default function Use() {
   const data = [

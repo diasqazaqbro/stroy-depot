@@ -1,5 +1,5 @@
-import { CatalogPages } from "@/pages/catalog/ui/catalog";
-import { Layout } from "@/widgets/Layout/Layout";
+import CatalogPages from "@/pages/catalog/ui/catalog";
+import Layout from "@/widgets/Layout/Layout";
 
 export default function Catalog() {
   return (

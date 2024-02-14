@@ -1,8 +1,10 @@
-import { Insta, Telegram, WhatsApp } from "@/shared/ui/Icon/Icon"
 import Link from "next/link";
 import './footer.scss'
+import Insta from "@/shared/ui/Icon/Icon";
+import WhatsApp from "@/shared/ui/Icon/icon3";
+import Telegram from "@/shared/ui/Icon/icon4";
 
-export const Footer = () => {
+export default function Footer() {
   return (
     <footer className="container lg:flex mb-[58px]">
       <div className="footer__left rounded-[15px] pt-10 pb-12 pl-10 pr-[225px] mr-5">
