@@ -1,18 +1,18 @@
 export const routes = [
   {
     title: "Главная",
-    href: "#",
+    href: "#main",
   },
   {
     title: "О компании",
-    href: "#",
+    href: "#about",
   },
   {
     title: "Каталог",
-    href: "#",
+    href: "/catalogs",
   },
   {
     title: "Контакты",
-    href: "#",
+    href: "#contacts",
   },
 ];

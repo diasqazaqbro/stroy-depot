@@ -57,7 +57,7 @@ export const InsideBurger: React.FC<InsideBurger> = ({ onClick }) => {
             className="w-full p-[0.08rem] rounded-xl bg-gradient-to-tr from-neutral-800 via-neutral-950 to-neutral-700"
           >
             <a
-              onClick={onClick}
+              onClick={() => onClick}
               className={
                 "flex items-center justify-between w-full p-5 rounded-xl bg-neutral-950"
               }

@@ -6,6 +6,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  transition: all 0.3s ease;
 
   &:first-child {
     padding: 29px 62px 27px 62px;
@@ -23,6 +24,15 @@
     -webkit-text-stroke-width: 1px;
     color: #fff;
     font-size: 100px;
+  }
+
+  &:hover {
+    background: var(--red);
+    .box__number {
+      -webkit-text-stroke-color: #fff;
+      color: var(--red);
+    }
+    color: #fff;
   }
 }
 

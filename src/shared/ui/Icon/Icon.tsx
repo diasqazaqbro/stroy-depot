@@ -143,3 +143,9 @@ export const Decrease = () => (
     <path d="M7.6 16H24.4M31 16C31 24.2843 24.2843 31 16 31C7.71573 31 1 24.2843 1 16C1 7.71573 7.71573 1 16 1C24.2843 1 31 7.71573 31 16Z" stroke="black" stroke-width="2"/>
   </svg>
 )
+
+export const Allow3: React.FC<IICON> = ({ className }) => (
+  <svg className='mr-2.5' xmlns="http://www.w3.org/2000/svg" width="37" height="26" viewBox="0 0 37 26" fill="none">
+    <path d="M1.78674 11.1924L13.8076 23.2133L35.0207 2" stroke="#681211" stroke-width="3"/>
+  </svg>
+)

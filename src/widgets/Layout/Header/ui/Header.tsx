@@ -7,7 +7,7 @@ import { Burger } from '@/entities/Burger';
 import styles from './Header.module.scss';
 
 interface IHeader {
-  onClick?: () => void; 
+  onClick?: any; 
   className?: string;
 }
 

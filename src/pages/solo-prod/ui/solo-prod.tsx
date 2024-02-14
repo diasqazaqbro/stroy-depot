@@ -1,4 +1,6 @@
 import { Order } from "@/features/AddTo/ui/AddTo"
+import Advantages from "@/widgets/Advantages/ui/Advantages"
+import Use from "@/widgets/Use/ui/Use"
 import Image from "next/image"
 
 export const SoloProd = () => {
@@ -20,7 +22,9 @@ export const SoloProd = () => {
             <h4 className="w-[285px]">{desc}</h4>
           </div>
         </div>
-      ))}        
+      ))}
+      <Use />
+      <Advantages />
     </section>
   )
 }

@@ -4,7 +4,7 @@ import './Contacts.scss';
 export const Contacts = () => {
   return (
     <section className='container mb-10'>
-      <div className='contacts rounded-[15px] pt-[65px] pl-10 pb-[72px]  '>
+      <div id='contacts' className='contacts rounded-[15px] pt-[65px] pl-10 pb-[72px]  '>
         <h2 className='mb-[43px]'>Наши контакты</h2>
         <h3 className='mb-2.5 address'>Адрес: </h3>
         <h3 className='mb-[43px] address__street'>г. Алматы, 

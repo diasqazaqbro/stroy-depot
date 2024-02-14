@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  scroll-behavior: smooth;  
+}
+
 h1 {
   font-size: 46px;
   line-height: normal;
@@ -30,6 +34,18 @@ h4 {
   padding-left: 120px;
   padding-right: 120px;
 }
+
+/* @media screen and (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media screen and (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+} */
 
 header {
   margin-left: auto;

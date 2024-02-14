@@ -21,6 +21,14 @@
   }
 }
 
+@media screen and (min-weight: 900px) {
+  .container {
+    max-width: 960px;
+  }
+  .right {
+    display: none;
+  }
+}
 .right {
   // background-image: url('../../../../public/right.png');
 }
