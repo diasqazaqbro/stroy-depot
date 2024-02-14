@@ -4,7 +4,7 @@ import Charach from "@/widgets/Char/ui/Charach"
 import Use from "@/widgets/Use/ui/Use"
 import Image from "next/image"
 
-export const SoloProd = () => {
+export default function SoloProd() {
   const data = [
     { image: '/image 8.png', price: '32 420 ₸ ', desc: 'Профессиональная пена с высокой производительностью (до 65 литров).', }
   ]

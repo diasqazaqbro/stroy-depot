@@ -1,7 +1,7 @@
 import { CatalogList } from "@/entities/CatalogList/ui/CatalogList"
 import { Goods } from "@/entities/Goods/ui/Goods"
 
-export const CatalogPages = () => {
+export default function CatalogPages() {
   return (
     <section className="container mt-[97px]">
       <div className="flex">

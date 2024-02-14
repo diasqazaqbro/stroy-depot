@@ -1,7 +1,7 @@
 import { ProductList } from "@/entities/ProductList"
 import { ProductFilter } from "@/widgets/Products/ui/Products"
 
-export const ProductsPage = () => {
+export default function ProductsPage() {
   return (
     <section className="container">
       <div className="flex">
