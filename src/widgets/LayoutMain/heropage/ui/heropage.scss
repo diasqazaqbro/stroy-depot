@@ -21,14 +21,46 @@
   }
 }
 
-@media screen and (min-weight: 900px) {
+.hero__mobile {
+  display: none;
+}
+
+@media (max-width: 768px) {
   .container {
-    max-width: 960px;
+    
   }
   .right {
     display: none;
   }
-}
-.right {
-  // background-image: url('../../../../public/right.png');
+
+  .left {
+    display: none;
+  }
+
+  .hero__mobile {
+    display: block;
+    border-radius: 0px;
+    padding: 24px 20px 44px 20px;
+    background: url('/right2.png') no-repeat;
+    margin-bottom: 44px;
+    // width: 488px;
+    object-fit: cover;
+
+    h1 {
+      color: #fff;
+    }
+
+    h2 {
+      color: #fff;
+      margin-bottom: 35px;
+    }
+  }
+
+  .btn {
+    width: 100%;
+    background: var(--blue);
+    color: #fff;
+    font-weight: 500;
+    line-height: normal;
+  }
 }

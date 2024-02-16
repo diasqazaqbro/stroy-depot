@@ -16,3 +16,30 @@
     margin-right: 0;
   }
 }
+
+@media (max-width: 768px) {
+  .company__flex {
+    flex-direction: column;
+  } 
+
+  .card {
+    background: #EAE9F1;
+    margin-right: 10px;
+    padding: 0;
+
+  &:first-child {
+    width: 53%;
+    margin-bottom: 10px;
+  }
+
+  &:nth-child(2) {
+    width: 53%;
+    margin-bottom: 10px;
+  }
+
+  &:last-child {
+    width: 53%;
+    margin-right: 24px;
+  }
+  }
+}

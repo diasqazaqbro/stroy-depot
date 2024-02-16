@@ -5,6 +5,7 @@ import Navbar from '@/entities/Navbar/ui/Navbar';
 import styles from './Header.module.scss';
 import Burger from '@/widgets/Burger/ui/Burger';
 import Position from '@/shared/ui/Icon/icon1';
+import DefaultLogo from '@/shared/ui/Icon/defautlLogo';
 
 interface IHeader {
   onClick?: any; 
@@ -15,8 +16,9 @@ export default function Header({ onClick }: IHeader) {
 
   return (
     <header className={`${styles.header} container `}>
-      <Link href='/' className={styles.logo}>
-        Stroy depot
+      <Link href='/' className={`${styles.logo} flex justify-center items-center`}>
+        <DefaultLogo />
+        STROY DEPOT
       </Link>
       <Burger onClick={onClick} />
       <Navbar />

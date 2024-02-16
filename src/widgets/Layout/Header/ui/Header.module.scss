@@ -6,10 +6,10 @@
   justify-content: space-between;
 
   .logo {
-    color: var(--black);
-    font-size: 30px;
+    color: #1A293A;
+    font-size: 21.524px;
     font-style: normal;
-    font-weight: 500;
+    font-weight: 700;
     line-height: normal;
   }
 
@@ -20,8 +20,22 @@
 }
 
 @media (max-width: 768px) {
+  .header {
+    padding: 26px 20px 24px 20px;
+  }
+
   .location {
     display: none;
+  }
+
+  .logo {
+    font-size: 14.459px;
+    white-space: nowrap;
+
+    svg {
+      width: 25.038px;
+      height: 37.002px;  
+    } 
   }
 
   .header {

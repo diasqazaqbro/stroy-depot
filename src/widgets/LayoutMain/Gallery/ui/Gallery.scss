@@ -7,3 +7,22 @@
 .gallery__inner {
   background: #F5F5F5;
 }
+
+@media (max-width: 768px) {
+  .gallery {
+    h2 {
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  .gallery__swiper {
+    display: none;
+  }
+
+  .gallery__inner {
+    background: transparent;
+  }
+}

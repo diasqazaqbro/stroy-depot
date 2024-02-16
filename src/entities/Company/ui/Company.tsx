@@ -3,7 +3,7 @@ import './Company.scss';
 
 export default function Company() {
   return (
-    <div className="flex mb-[68px]">
+    <div className="company__flex flex mb-[68px]">
       <div className="card rounded-[10px] flex justify-center items-center">
         <Image width={93} height={49} src='/tytan.png' alt={"tytan"} />
       </div>

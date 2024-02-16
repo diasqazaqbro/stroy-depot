@@ -23,8 +23,18 @@
   }
 }
 
-@media screen and (min-width: 0px) and (max-width: 985px) {
+@media (max-width: 768px) {
   .quest {
     flex-direction: column;
+    padding: 66px 20px 29px 20px;
+
+    &__left {
+      text-align: start;
+      
+      h4 {
+        width: 210px;
+        margin-bottom: 29px;
+      }
+    }
   }
 }

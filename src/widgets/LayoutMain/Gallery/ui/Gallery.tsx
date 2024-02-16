@@ -8,7 +8,7 @@ export default function Gallery() {
       <section className="container pt-[40px]">
         <div className="flex gallery mb-[37px]">
           <h2>Галерея</h2>
-          <div></div>
+          <div className="gallery__swiper"></div>
         </div>
       </section>
       <div className="pb-[122px]">
