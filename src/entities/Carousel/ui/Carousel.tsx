@@ -28,8 +28,11 @@ export default function CarouselSpacing() {
           </CarouselItem>
         ))}
       </CarouselContent>
-      <CarouselPrevious />
-      <CarouselNext />
+      <div className="carousel__btn">
+        <CarouselPrevious className="carousel__slide" />
+        <CarouselNext className="carousel__slide next" />
+      </div>
+      
     </Carousel>
   )
 }

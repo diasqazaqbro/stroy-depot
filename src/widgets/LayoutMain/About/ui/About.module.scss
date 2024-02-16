@@ -83,9 +83,22 @@
   }
 }
 
+.mobile {
+  display: none;
+}
+
 @media (max-width: 768px) {
-  .box {
-    // margin-right: 20px;
+  .mobile {
+    display: block;
+    background: url('/about2.png') no-repeat;
+  }
+
+  .mobile__container {
+    padding-left: 41px;
+    padding-right: 41px;
+  }
+
+  .box__mobile {
     background: var(--white);
     border-radius: 11.25px;
     display: flex;
@@ -117,17 +130,30 @@
 }
 
 .about__section {
-  background: url('/about2.png') no-repeat;
   // height: 432px;
+  display: none;
   width: 100%;
 }
 
 .image {
   background-image: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // padding: 35px 0px 0px 0px;
+  margin-bottom: 29px;
+
+  &__title {
+    width: 311px;
+  }
 }
 
 .image__inside {
+  margin-top: 35px;
   padding: 26px 19px 10px 16px;
+  background: rgba(130, 130, 130, 0.20);
+  backdrop-filter: blur(24.053333282470703px);
+  padding: 35px 16px 20px 19px;
   width: 320px;
   h2 {
     font-size: 14px;
@@ -135,6 +161,7 @@
 
   p {
     font-size: 10px;
+    font-weight: 500;
   }
 
   h4 {
@@ -142,6 +169,6 @@
   }
 }
 
-.box__flex {
+.box__flex__mobile {
   display: block;
 }

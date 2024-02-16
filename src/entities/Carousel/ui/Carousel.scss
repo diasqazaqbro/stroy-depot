@@ -13,3 +13,28 @@
     margin-right: 15px;
   }
 }
+
+.carousel__slide {
+  background: #fff;
+    margin-right: -15px;
+}
+
+@media (max-width: 768px) {
+  .carousel__btn {
+    position: absolute;
+    left: 49%;
+    padding-top: 5rem;
+  }
+
+  .carousel__inner {
+
+    &__inside {
+      margin-right: 0;
+    }
+  }
+  .carousel__slide {
+    .prev {
+      margin-right: 10px;
+    } 
+  }
+}
