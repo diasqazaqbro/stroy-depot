@@ -78,3 +78,29 @@
     font-weight: 500;
   }
 }
+
+@media (max-width: 768px) {
+  .box {
+    margin-right: 20px;
+    background: var(--white);
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+  
+    &:first-child {
+      padding: 29px 62px 27px 62px;
+      margin-bottom: 15px;
+    }
+    &:nth-child(2) {
+      padding: 29px 96px 27px 96px;
+      margin-bottom: 15px;
+    }
+    &:last-child {
+      margin-right: 0;
+      padding: 29px 124px 27px 124px;
+    }
+  }
+}

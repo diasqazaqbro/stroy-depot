@@ -3,6 +3,7 @@ import './footer.scss'
 import Insta from "@/shared/ui/Icon/Icon";
 import WhatsApp from "@/shared/ui/Icon/icon3";
 import Telegram from "@/shared/ui/Icon/icon4";
+import Logo from "@/shared/ui/Icon/logo";
 
 export default function Footer() {
   return (
@@ -14,7 +15,7 @@ export default function Footer() {
         </h4>
         <h4 className="">Всякие сертификаты если есть</h4>
       </div>
-      <div className="footer__right flex rounded-[15px] pt-10 pl-[102px] pr-28 pb-12">
+      <div className="footer__right md:flex rounded-[15px] pt-10 pl-[102px] pr-28 pb-12">
         <div className="mr-[187px]">
           <h3 className="right__text mb-5">Навигация</h3>
           <ul className="flex flex-col footer__links">
@@ -33,6 +34,31 @@ export default function Footer() {
             <Link href={''} className="mr-5" ><WhatsApp /></Link>
             <Link href={''} className="" ><Telegram /></Link>
           </ul>
+        </div>
+      </div>
+
+      <div className="mobile flex">
+        <div className="mobile__footer rounded-[15px] md:flex px-10 py-[34px]">
+          <div className="mobile__footer__logo jusstify-center items-center flex whitespace-nowrap mb-[33.67px]">
+            <Logo /> STROY DEPOT
+          </div>
+          <h2 className="mb-[23px]">Наши контакты</h2>
+          <h3 className="mb-2.5 font-semibold">Адрес:</h3>
+          <h3 className="font-semibold">
+            г. Алматы, 
+            ул Абая 1, дом 1
+          </h3>
+          <h3 className="font-semibold mb-2.5">Режим работы:</h3>
+          <h3 className="font-semibold mb-[26px]">Пн - Пт: с 9:00 до 19:00</h3>
+          <h4 className="mb-[15px]">Тел: + 7 (777) 123 45 67</h4>
+          <h4 className="mb-3">Почта: post@gmail.com</h4>
+          <div className="flex gap-5 mb-10">
+            <Insta/> <WhatsApp /> <Telegram />
+          </div>
+          <h4 className="white">
+            Название Ип
+          </h4>
+          <h4 className="">Всякие сертификаты если есть</h4>
         </div>
       </div>
     </footer>

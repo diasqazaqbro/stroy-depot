@@ -19,8 +19,12 @@
   }
 }
 
-@media (max-width: 1023px) {
+@media (max-width: 768px) {
   .location {
     display: none;
+  }
+
+  .header {
+    justify-content: space-between;
   }
 }

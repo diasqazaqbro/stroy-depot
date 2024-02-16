@@ -10,16 +10,16 @@ export default function About() {
           <h4 className='mt-10'>Целью компании является качественная и эффективная дистрибьюторская деятельность. Мы стремимся завоевать и удержать позицию лидирующей компании по реализации строительной химии, стремимся стать надежным партнером для клиентов и потребителей продукции и услуг компании.</h4>
         </div>
       </div>
-      <div className="flex">
-        <div className={styles.box}>
+      <div className="md:flex">
+        <div className={`${styles.box} md:py-5 md:px-[45px] md:w-[290.25px]`}>
           <h1 className={styles.box__number}>01</h1>
           <h4>Квалифицированные специалисты</h4>
         </div> 
-        <div className={styles.box}>
+        <div className={`${styles.box} md:py-5 md:px-[45px] md:w-[290.25px]`}>
           <h1 className={styles.box__number}>02</h1>
           <h4>Оригинальная продукция</h4>
         </div> 
-        <div className={styles.box}>
+        <div className={`${styles.box} md:py-5 md:px-[45px] md:w-[290.25px]`}>
           <h1 className={styles.box__number}>03</h1>
           <h4>Гарантия качества</h4>
         </div>

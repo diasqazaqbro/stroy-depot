@@ -21,3 +21,41 @@
     font-weight: 600;
   }
 }
+
+.mobile {
+  display: none;
+}
+
+@media (max-width: 788px) {
+  .footer__left {
+    display: none;
+  }
+  .footer__right {
+    display: none;
+  }
+
+  .mobile {
+    display: block;
+
+    &__footer {
+      background: var(--blue);
+      color: #fff;
+    }
+
+    &__footer__logo {
+      font-size: 21.532px;
+      font-weight: 700;
+      color: white;
+
+      svg {
+        margin-right: 4px;
+      }
+    }
+
+    svg {
+      path {
+        fill: #fff;
+      }
+    }
+  }
+}
