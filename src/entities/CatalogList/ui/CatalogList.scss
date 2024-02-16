@@ -46,3 +46,17 @@
     margin-right: 0;
   }
 }
+
+@media (max-width: 768px) {
+  .catalog__grid {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .catalog__item {
+    margin-bottom: 20px;
+    margin-right: 0;
+  }
+}

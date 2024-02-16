@@ -15,9 +15,11 @@ export default function Goods() {
   return (
     <div className="mr-[21px]">
       <h1 className='mb-[15px]'>Товары</h1>
-      {data.map(({ name }, index) => (
-        <h5 key={index} className="whitespace-nowrap font-medium p-[5px] mb-[5px] goods__name">{name}</h5>
-      ))}
+      <div className='goods__item'>
+        {data.map(({ name }, index) => (
+          <h5 key={index} className="whitespace-nowrap font-medium p-[5px] mb-[5px] goods__name">{name}</h5>
+        ))}
+      </div>
     </div>
   )
 }

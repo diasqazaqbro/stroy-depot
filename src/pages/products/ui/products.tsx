@@ -4,7 +4,7 @@ import ProductFilter from "@/widgets/Products/ui/Products"
 export default function ProductsPage() {
   return (
     <section className="container">
-      <div className="flex">
+      <div className="md:flex">
         <ProductFilter />
         <ProductList />
       </div>

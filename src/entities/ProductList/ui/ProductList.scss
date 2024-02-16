@@ -94,3 +94,31 @@
             filter: blur(20px) opacity(10%);
   }
 }
+
+@media (max-width: 768px) {
+  .product__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 0fr);
+    justify-content: center;
+    grid-column: 15px;
+  }
+
+  .product__item {
+    width: 160.25px;
+    margin-right: 0;
+    margin-right: 15px;
+
+    &:nth-child(2) {
+      margin-right: 0px;
+    }
+    &:nth-child(4) {
+      margin-right: 0px;
+    }
+    &:nth-child(6) {
+      margin-right: 0px;
+    }
+    &:nth-child(8) {
+      margin-right: 0px;
+    }
+  }
+}

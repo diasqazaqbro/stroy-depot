@@ -37,8 +37,8 @@ h4 {
 
 @media screen and (max-width: 768px) {
   .container {
-    padding-left: 42px;
-    padding-right: 42px;
+    padding-left: 20px;
+    padding-right: 20px;
     margin-left: auto;
     margin-right: auto;
   }

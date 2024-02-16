@@ -4,7 +4,7 @@ import Layout from "@/widgets/Layout/Layout"
 export default function Products() {
   return (
     <Layout>
-      <main className="main mt-[124px] mb-[176px]">
+      <main className="main md:mt-[124px] mt-[76px] mb-[66px] md:mb-[176px]">
         <ProductsPage />
       </main>
     </Layout>
