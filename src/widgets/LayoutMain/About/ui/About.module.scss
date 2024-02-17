@@ -170,5 +170,8 @@
 }
 
 .box__flex__mobile {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }

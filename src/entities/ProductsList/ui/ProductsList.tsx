@@ -11,7 +11,7 @@ export default function PopularProductsList() {
   ];
 
   return (
-    <ul className="products md:flex">
+    <ul className="products md:flex px-7">
       {data.map(({ id, name, image }, index) => (
         <li key={id} className={`product ${index !== data.length - 1 ? 'md:mr-5' : ''} rounded-[15px] ${index === data.length - 1 ? 'mr-0' : ''}`}>
           <div className="products__image p-5 mb-2.5 flex justify-center items-center">
