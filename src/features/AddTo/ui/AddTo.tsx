@@ -27,7 +27,7 @@ export default function Order() {
         <h2 className="font-medium mr-5">{count}</h2>
         <Button className="rounded-[100%] " onClick={() => increaseCounter()}><Increase /></Button>
       </div>
-      <Button label="Заказать" className="py-[13px] mb-[35px] order__btn px-[125px] rounded-[15px]"/>
+      <Button label="Заказать" className="py-[13px] mb-[35px] order__btn w-[100%] md:px-[125px] rounded-[15px]"/>
     </>
   )
 }

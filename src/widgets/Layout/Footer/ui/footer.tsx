@@ -7,7 +7,7 @@ import Logo from "@/shared/ui/Icon/logo";
 
 export default function Footer() {
   return (
-    <footer className="container lg:flex mb-[58px]">
+    <footer className="container lg:flex md:mb-[58px]">
       <div className="footer__left rounded-[15px] pt-10 pb-12 pl-10 pr-[225px] mr-5">
         <h2 className="">Stroy Depot</h2>
         <h4 className="mt-[86px] white">
@@ -44,7 +44,7 @@ export default function Footer() {
           </div>
           <h2 className="mb-[23px]">Наши контакты</h2>
           <h3 className="mb-2.5 font-semibold">Адрес:</h3>
-          <h3 className="font-semibold">
+          <h3 className="font-semibold mb-[43px] w-[162px]">
             г. Алматы, 
             ул Абая 1, дом 1
           </h3>
