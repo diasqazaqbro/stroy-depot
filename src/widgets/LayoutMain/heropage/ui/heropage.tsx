@@ -15,7 +15,7 @@ export default function HeroPage() {
           <Button label='Заказать звонок' className="btn rounded-[50px] font-medium" />
         </div>
         <div className="right rounded-[15px]">
-          <Image src='/right.png' className="hero__image" width={488} height={691} alt={"right"} /> 
+          <Image src='/right.png' loading="lazy" className="hero__image" width={488} height={691} alt={"right"} /> 
         </div>
         <div></div>
 
