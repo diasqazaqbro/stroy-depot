@@ -3,6 +3,7 @@ import Advantages from "@/widgets/Advantages/ui/Advantages"
 import Charach from "@/widgets/Char/ui/Charach"
 import Use from "@/widgets/Use/ui/Use"
 import Image from "next/image"
+import './solo-prod.scss'
 
 export default function SoloProd() {
   const data = [
@@ -12,12 +13,12 @@ export default function SoloProd() {
   return (
     <section className="">
       {data.map(({ image, price, desc }, index) => (
-        <div key={index} className="flex mb-[35px]">
+        <div key={index} className="md:flex mb-[35px]">
           <div className="mr-[126px] px-[198px] py-[31px] border-[2px] border-solid border-gray-500">
             <Image src={image} className="flex justify-center items-center" alt="Product" width={90} height={423} /> 
           </div>
           <div className="">
-            <h1 className="mb-[18px]">{price}</h1>
+            <h1 className="mb-[18px] price">{price}</h1>
             <Order />
             <h2 className="font-medium mb-[14px]">Описание</h2>
             <h4 className="w-[285px]">{desc}</h4>
