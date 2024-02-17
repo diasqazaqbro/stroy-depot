@@ -14,7 +14,7 @@ export default function SoloProd() {
     <section className="">
       {data.map(({ image, price, desc }, index) => (
         <div key={index} className="md:flex mb-[35px]">
-          <div className="mr-[126px] px-[198px] py-[31px] border-[2px] border-solid border-gray-500">
+          <div className="mr-[126px] w-[100%] py-8 flex justify-center border-[2px] border-solid border-gray-500">
             <Image src={image} className="flex justify-center items-center" alt="Product" width={90} height={423} /> 
           </div>
           <div className="">
