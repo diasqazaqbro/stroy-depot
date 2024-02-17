@@ -1,6 +1,7 @@
 import Image from "next/image";
 import './ProductsList.scss';
 import Arrow from "@/shared/ui/Icon/icon2";
+import Link from "next/link";
 
 export default function PopularProductsList() {
   const data = [
@@ -13,16 +14,18 @@ export default function PopularProductsList() {
   return (
     <ul className="products md:flex px-7">
       {data.map(({ id, name, image }, index) => (
-        <li key={id} className={`product ${index !== data.length - 1 ? 'md:mr-5' : ''} rounded-[15px] ${index === data.length - 1 ? 'mr-0' : ''}`}>
-          <div className="products__image p-5 mb-2.5 flex justify-center items-center">
-            <Image src={image} width={200} height={390} alt="" className="object-cover" />
-          </div>
-          <h2 className="product__name mb-[13px] xl:flex xl:justify-center xl:items-center">{name}</h2>
-          <div className="flex items-center">
-            <h4 className="hidden">Подробнее</h4>
-            <Arrow className="flex justify-center items-center ml-[21px]" />
-          </div>
-        </li>
+        <Link href={`/product/${id}`} key={id}>
+          <li className={`product ${index !== data.length - 1 ? 'md:mr-5' : ''} rounded-[15px] ${index === data.length - 1 ? 'mr-0' : ''}`}>
+            <div className="products__image p-5 mb-2.5 flex justify-center items-center">
+              <Image src={image} width={200} height={390} alt="" className="object-cover" />
+            </div>
+            <h2 className="product__name mb-[13px] xl:flex xl:justify-center xl:items-center">{name}</h2>
+            <div className="flex items-center">
+              <h4 className="hidden">Подробнее</h4>
+              <Arrow className="flex justify-center items-center ml-[21px]" />
+            </div>
+          </li>
+        </Link>
       ))}
     </ul>
   )
