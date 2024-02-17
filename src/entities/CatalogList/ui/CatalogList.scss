@@ -18,15 +18,15 @@
       color: #fff;
     }
     svg {
+      fill: #fff;
       path {
         stroke: #fff;
-        fill: #fff;
       }
 
       &:first-child {
-        fill: none;
+        fill: transparent;
         path{
-          stroke: #fff;
+          stroke: white;
         }
       }
       &:nth-child(7) {
@@ -44,6 +44,15 @@
   }
   &:nth-child(6) {
     margin-right: 0;
+  }
+}
+
+.poly {
+  svg {
+    fill: white;
+    path {
+      stroke: #828282;
+    }
   }
 }
 

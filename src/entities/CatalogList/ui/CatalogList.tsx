@@ -12,7 +12,7 @@ import Miscellaneous from '@/shared/ui/Icon/icon12';
 
 export default function CatalogList() {
   const data = [
-    { id: '1', name: 'Полиуретановые пены', icon: <PolyurethaneFoams />, className: 'whitespace-nowrap text-center font-medium mt-[15px] px-5' },
+    { id: '1', name: 'Полиуретановые пены', icon: <PolyurethaneFoams className='mt-2 mb-[15px] poly' />, className: 'whitespace-nowrap text-center font-medium mt-[15px] px-5' },
     { id: '2', name: 'Пено-клеи', icon: <FoamGlue />, className: 'text-center font-medium mt-[15px] px-5' },
     { id: '3', name: 'Силиконовые герметики', icon: <SiliconeSealants />, className: 'whitespace-normal text-center font-medium mt-[15px] px-5' },
     { id: '4', name: 'Монтажные клеи', icon: <AssemblyAdhesives />, className: 'text-center font-medium mt-[15px] px-5' },
