@@ -98,7 +98,12 @@
 @media (max-width: 768px) {
   .mobile {
     display: block;
-    background: url('/about2.png') no-repeat;
+    background: url('/about.jpg') no-repeat;
+    background-position: center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover
   }
 
   .mobile__container {
@@ -160,7 +165,7 @@
     background: rgba(130, 130, 130, 0.20);
     backdrop-filter: blur(24.053333282470703px);
     padding: 35px 16px 20px 19px;
-    width: 320px;
+    width: 80%;
     h2 {
       font-size: 14px;
     }

@@ -44,7 +44,12 @@
     background: url('/right2.png') no-repeat;
     margin-bottom: 44px;
     // width: 488px;
-    object-fit: cover;
+    background-size: cover;
+    background-position: center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 
     h1 {
       color: #fff;
@@ -57,7 +62,7 @@
   }
 
   .btn {
-    width: 100%;
+    width: 80%;
     background: var(--blue);
     color: #fff;
     font-weight: 500;
