@@ -1,30 +1,53 @@
-import Button from "@/shared/ui/Button/Button";
-import './heropage.scss';
+"use client"
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
+import axios from "axios";
+import Button from "@/shared/ui/Button/Button";
 import Company from "@/entities/Company/ui/Company";
+import './heropage.scss';
 
 export default function HeroPage() {
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get('https://stroy-depot-get-serv.vercel.app/api/settings');
+        setData(response.data);
+      } catch (error) {
+        console.error('Ошибка при выполнении запроса:', error);
+      }
+    };
+
+    fetchData();
+
+    return () => {};
+  }, []);
 
   return (
     <>
-      <section className="container flex md:mb-[127px]">
-        <div id="main" className="left mr-[20px] rounded-[15px]">
-          <h1 className="mb-14">Строим Будущее вместе</h1>
-          <h2 className="mb-[57px]">Мы являемся официальным дистрибьютором</h2>
-          <Company />
-          <Button label='Заказать звонок' className="btn rounded-[50px] font-medium" />
-        </div>
-        <div className="right rounded-[15px]">
-          <Image src='/right.png' loading="lazy" className="hero__image" width={488} height={691} alt={"right"} /> 
-        </div>
-        <div></div>
-
-      </section>
+      {data.map(({ title, id, suptitle }) => (
+        <section key={id} className="container flex md:mb-[127px]">
+          <div id="main" className="left mr-[20px] rounded-[15px]">
+            <h1 className="mb-14">{title}</h1>
+            <h2 className="mb-[57px]">{suptitle}</h2>
+            <Company />
+            <Button label='Заказать звонок' className="btn rounded-[50px] font-medium" />
+          </div>
+          <div className="right rounded-[15px]">
+            <Image src='/right.png' loading="lazy" className="hero__image" width={488} height={691} alt={"right"} /> 
+          </div>
+        </section>
+      ))}
       <div className="hero__mobile">
-        <h1 className="mb-[17px]">Строим Будущее вместе</h1>
-        <h2>Мы являемся официальным дистрибьютором</h2>
-        <Company />
-        <Button className="btn mt-6 py-[17px] rounded-[50px] font-medium" label="Заказать звонок" />
+        {data.map(({ title, id, suptitle }) => (
+          <div key={id}>
+            <h1 className="mb-[17px]">{title}</h1>
+            <h2>{suptitle}</h2>
+            <Company />
+            <Button className="btn mt-6 py-[17px] rounded-[50px] font-medium" label="Заказать звонок" />
+          </div>
+        ))}
       </div>
     </>
   )

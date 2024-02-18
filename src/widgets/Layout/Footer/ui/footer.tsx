@@ -1,11 +1,12 @@
+"use client"
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Link from "next/link";
-import './footer.scss'
 import Insta from "@/shared/ui/Icon/Icon";
 import WhatsApp from "@/shared/ui/Icon/icon3";
 import Telegram from "@/shared/ui/Icon/icon4";
 import Logo from "@/shared/ui/Icon/logo";
+import './footer.scss'
 
 export default function Footer() {
   const [data, setData] = useState([]);
