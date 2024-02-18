@@ -5,6 +5,7 @@ import axios from "axios";
 import Button from "@/shared/ui/Button/Button";
 import Company from "@/entities/Company/ui/Company";
 import './heropage.scss';
+import { BASE_URL } from "@/shared/api/apiBase";
 
 export default function HeroPage() {
   const [data, setData] = useState([]);
@@ -12,7 +13,7 @@ export default function HeroPage() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('https://stroy-depot-get-serv.vercel.app/api/settings');
+        const response = await axios.get(`${BASE_URL}api/settings`);
         setData(response.data);
       } catch (error) {
         console.error('Ошибка при выполнении запроса:', error);

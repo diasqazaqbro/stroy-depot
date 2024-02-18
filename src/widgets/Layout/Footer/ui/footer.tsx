@@ -1,5 +1,6 @@
 "use client"
 import React, { useEffect, useState } from "react";
+import { BASE_URL } from "@/shared/api/apiBase";
 import axios from "axios";
 import Link from "next/link";
 import Insta from "@/shared/ui/Icon/Icon";
@@ -14,7 +15,7 @@ export default function Footer() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get('https://stroy-depot-get-serv.vercel.app/api/settings');
+        const response = await axios.get(`${BASE_URL}api/settings`);
         setData(response.data);
         console.log(response.data);
       } catch (error) {
