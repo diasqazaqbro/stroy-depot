@@ -12,7 +12,7 @@ export default function PopularProductsList() {
   ];
 
   return (
-    <ul className="products lg:flex px-7">
+    <ul className="products lg:flex lg:px-0 px-7">
       {data.map(({ id, name, image }, index) => (
         <Link href={`/product/${id}`} key={id}>
           <li className={`product ${index !== data.length - 1 ? 'md:mr-5' : ''} rounded-[15px] ${index === data.length - 1 ? 'mr-0' : ''}`}>

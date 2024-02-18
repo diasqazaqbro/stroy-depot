@@ -1,7 +1,7 @@
 .input__inner {
   padding: 16px 0 16px 20px;
   border:  1px solid var(--grey);
-  max-width: 488px;
+  width: 100%;
   background: transparent;
 
   input {
@@ -14,7 +14,7 @@
   color: #fff;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1140px) {
   .form__btn {
     width: 100%;
   }
