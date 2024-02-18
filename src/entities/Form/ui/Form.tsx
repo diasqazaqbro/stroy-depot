@@ -5,11 +5,11 @@ import Input from "@/shared/ui/Input/Input";
 import './Form.scss';
 
 export default function Form() {
-  const [phoneNumber, setPhoneNumber] = useState('');
+  // const [phoneNumber, setPhoneNumber] = useState('');
 
-  const handlePhoneNumberChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    phoneNumber(event.target.value)
-  }
+  // const handlePhoneNumberChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+  //   phoneNumber(event.target.value)
+  // }
 
   return (
     <form className="">
@@ -20,8 +20,8 @@ export default function Form() {
         <Input 
           placeholder="+ 7 (XXX) XXX XX XX" 
           type="tel" 
-          value={phoneNumber} 
-          onChange={handlePhoneNumberChange} 
+          // value={phoneNumber} 
+          // onChange={handlePhoneNumberChange} 
         />
       </div>
       <div className="input__inner mb-[15px] rounded-[50px]">
