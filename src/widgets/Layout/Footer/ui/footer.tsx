@@ -15,7 +15,7 @@ export default function Footer() {
         </h4>
         <h4 className="">Всякие сертификаты если есть</h4>
       </div>
-      <div className="footer__right md:flex rounded-[15px] pt-10 pl-[102px] pr-28 pb-12">
+      <div className="footer__right md::flex rounded-[15px] pt-10 pl-[102px] pr-28 pb-12">
         <div className="mr-[187px]">
           <h3 className="right__text mb-5">Навигация</h3>
           <ul className="flex flex-col footer__links">
@@ -37,7 +37,7 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="mobile flex">
+      <footer className="mobile flex">
         <div className="mobile__footer rounded-[15px] md:flex px-10 py-[34px]">
           <div className="mobile__footer__logo jusstify-center items-center flex whitespace-nowrap mb-[33.67px]">
             <Logo /> STROY DEPOT
@@ -60,7 +60,7 @@ export default function Footer() {
           </h4>
           <h4 className="">Всякие сертификаты если есть</h4>
         </div>
-      </div>
+      </footer>
     </footer>
   )
 }

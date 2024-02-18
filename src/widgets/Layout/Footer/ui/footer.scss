@@ -26,7 +26,7 @@
   display: none;
 }
 
-@media (max-width: 788px) {
+@media (max-width: 1140px) {
   .footer__left {
     display: none;
   }
@@ -40,6 +40,7 @@
     &__footer {
       background: var(--blue);
       color: #fff;
+      flex-direction: column;
     }
 
     &__footer__logo {
