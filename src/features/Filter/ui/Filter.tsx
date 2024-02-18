@@ -1,21 +1,39 @@
+"use client"
+import { useState } from 'react';
 import Input from "@/shared/ui/Input/Input";
 import './Filter.scss';
 
 export default function Filter() {
+  const [checkedItems, setCheckedItems] = useState<{ [key: string]: boolean }>({});
+
   const data = [
-    { name: 'Двери и окна',  },
-    { name: 'Стены и фасады', },
-    { name: 'Техническое обслуживание и Ремонт', className: 'checkbox__filter w-[40px] h-[33px] mr-2.5 items-center' },
-  ]
-  
+    { id: '1', name: 'Двери и окна' },
+    { id: '2', name: 'Стены и фасады' },
+    { id: '3', name: 'Техническое обслуживание и Ремонт', className: 'checkbox__filter w-[40px] h-[33px] mr-2.5 items-center' },
+  ];
+
+  const handleCheckboxChange = (id: string) => {
+    setCheckedItems(prevCheckedItems => ({
+      ...prevCheckedItems,
+      [id]: !prevCheckedItems[id]
+    }));
+  };
+
   return (
     <ul className="">
-      {data.map(({ name, className }, index ) => (
-        <li key={index} className="pb-2.5 pr-2.5 flex mb-2.5 items-center">
-          <Input type="checkbox" className={`${name === 'Техническое обслуживание и Ремонт' ? className : 'checkbox__filter w-[33px] h-[33px] mr-2.5 flex'}`} />
-          <h3 className="checbox__text items-center flex">{name}</h3>
+      {data.map(({ name, className, id }) => (
+        <li key={id} className="pb-2.5 pr-2.5 flex mb-2.5 items-center">
+          <Input
+            type="checkbox"
+            checked={!!checkedItems[id]}
+            onChange={() => handleCheckboxChange(id)}
+            className={`${name === 'Техническое обслуживание и Ремонт' ? className : 'checkbox__filter w-[33px] h-[33px] mr-2.5 flex'}`}
+          />
+          <h3 className="checbox__text items-center flex" onClick={() => handleCheckboxChange(id)}>
+            {name}
+          </h3>
         </li>
       ))}
     </ul>
-  )
+  );
 }
