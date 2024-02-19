@@ -73,7 +73,7 @@ export default function Form({ onSubmit = () => {} }: FormProps) {
 
   const handleFormSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    setIsSubmitting(true);
+    setIsSubmitting(!isSubmitting);
     schema.validate(formData, { abortEarly: false })
       .then(() => {
         onSubmit(formData);
@@ -82,6 +82,7 @@ export default function Form({ onSubmit = () => {} }: FormProps) {
         setFormResetting(true);
         setTimeout(() => {
           setFormData(initialFormData);
+          setIsSubmitting(false);
           setFormResetting(false);
         }, 5000);
       })
@@ -106,6 +107,7 @@ export default function Form({ onSubmit = () => {} }: FormProps) {
           placeholder="Как к вам обращаться" 
           type="text" 
           name="name"
+          disabled={formResetting}
           value={formData.name}
           onChange={handleInputChange}
         />
@@ -116,6 +118,7 @@ export default function Form({ onSubmit = () => {} }: FormProps) {
           placeholder="+7 (XXX) XXX XX XX" 
           type="tel" 
           maxLength={16}
+          disabled={formResetting}
           name="phoneNumber"
           value={formData.phoneNumber}
           onChange={handlePhoneNumberChange}
@@ -127,6 +130,7 @@ export default function Form({ onSubmit = () => {} }: FormProps) {
           placeholder="Что вас интересует?" 
           type="text" 
           name="interest"
+          disabled={formResetting}
           value={formData.interest}
           onChange={handleInputChange}
         />
