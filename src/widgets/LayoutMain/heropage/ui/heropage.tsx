@@ -1,11 +1,11 @@
 "use client"
 import React, { useEffect, useState } from "react";
+import { BASE_URL } from "@/shared/api/apiBase";
 import Image from "next/image";
 import axios from "axios";
 import Button from "@/shared/ui/Button/Button";
 import Company from "@/entities/Company/ui/Company";
 import './heropage.scss';
-import { BASE_URL } from "@/shared/api/apiBase";
 
 export default function HeroPage() {
   const [data, setData] = useState([]);
@@ -42,7 +42,7 @@ export default function HeroPage() {
       ))}
       <div className="hero__mobile">
         {data.map(({ title, id, suptitle }) => (
-          <div key={id}>
+          <div id="main" key={id}>
             <h1 className="mb-[17px]">{title}</h1>
             <h2>{suptitle}</h2>
             <Company />

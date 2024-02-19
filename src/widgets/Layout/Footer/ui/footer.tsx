@@ -39,10 +39,10 @@ export default function Footer() {
         <div className="mr-[187px]">
           <h3 className="right__text mb-5">Навигация</h3>
           <ul className="flex flex-col footer__links">
-            <Link href={''} className="mb-[15px]">Главная</Link>
-            <Link href={''} className="mb-[15px]">О компании</Link>
-            <Link href={''} className="mb-[15px]">Каталог</Link>
-            <Link href={''} className="">Контакты</Link>
+            <Link href='#main' className="mb-[15px]">Главная</Link>
+            <Link href='#about' className="mb-[15px]">О компании</Link>
+            <Link href='/catalogs' className="mb-[15px]">Каталог</Link>
+            <Link href='#contacts' className="">Контакты</Link>
           </ul>
         </div>
         <div className="">
@@ -63,7 +63,7 @@ export default function Footer() {
       </div>
 
       {data.map(({ phoneNumber, id, address, workTime }) => (
-        <footer key={id} className="mobile flex">
+        <footer id="contacts" key={id} className="mobile flex">
           <div className="mobile__footer rounded-[15px] md:flex px-10 py-[34px]">
             <div className="mobile__footer__logo justify-center items-center flex whitespace-nowrap mb-[33.67px]">
               <Logo /> STROY DEPOT
