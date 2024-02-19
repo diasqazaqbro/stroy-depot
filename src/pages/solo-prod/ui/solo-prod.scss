@@ -1,5 +1,14 @@
-@media (max-width: 768px) {
+.image__product {
+  width: 48%;
+}
+
+@media (max-width: 1140px) {
   .price {
     margin-top: 32px;
   }
+
+  .image__product {
+    width: 100%;
+  }
 }
+
