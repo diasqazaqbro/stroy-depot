@@ -1,33 +1,44 @@
-import React, { ReactNode, createContext, useContext, useEffect, useState } from 'react';
+"use client"
+import React, { createContext, useState, useContext, ReactNode } from 'react';
 
-interface MenuContextType {
-  isMenuOpen: boolean;
-  setIsMenuOpen: (isOpen: boolean) => void;
+interface Data {
+  [key: string]: any;
 }
 
-const MenuContext = createContext<MenuContextType | undefined>(undefined);
-
-export const useMenu = () => {
-  const context = useContext(MenuContext);
-  return context || { isMenuOpen: false, setIsMenuOpen: () => {} };
-};
-
-
-interface IMenuProvider {
-  children?: ReactNode
+interface DataContextType {
+  data: Data;
+  setValues: (values: Data) => void;
 }
 
-export const MenuProvider: React.FC<IMenuProvider> = ({ children }) => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+const DataContext = createContext<DataContextType | undefined>(undefined);
 
-  useEffect(() => {
-    setIsMenuOpen(current => !current);
-  }, []);
+interface DataProviderProps {
+  children: ReactNode;
+}
+
+export const DataProvider = ({ children }: DataProviderProps) => {
+  const [data, setData] = useState<Data>({});
+
+  const setValues = (values: Data) => {
+    setData(prevData => ({
+      ...prevData,
+      ...values
+    }));
+  };
 
   return (
-    <MenuContext.Provider value={{ isMenuOpen, setIsMenuOpen }}>
+    <DataContext.Provider value={{ data, setValues }}>
       {children}
-    </MenuContext.Provider>
+    </DataContext.Provider>
   );
 };
+
+export const useData = () => {
+  const context = useContext(DataContext);
+  // if (!context) {
+  //   throw new Error('useData must be used within a DataProvider');
+  // }
+  return context;
+};
+
 
