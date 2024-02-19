@@ -30,14 +30,17 @@ const schema = yup.object().shape({
     .required("Это обязательное поле"),
 });
 
+const initialFormData: FormData = {
+  name: "",
+  phoneNumber: "",
+  interest: ""
+};
+
 export default function Form({ onSubmit = () => {} }: FormProps) { 
-  const [formData, setFormData] = useState<FormData>({
-    name: "",
-    phoneNumber: "",
-    interest: ""
-  });
+  const [formData, setFormData] = useState<FormData>(initialFormData);
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [formResetting, setFormResetting] = useState(false);
 
   const normalizePhoneNumber = (value: string) => {
     const phoneNumber = value.replace(/[^\d]/g, '');
@@ -74,13 +77,13 @@ export default function Form({ onSubmit = () => {} }: FormProps) {
     schema.validate(formData, { abortEarly: false })
       .then(() => {
         onSubmit(formData);
-        setFormData({
-          name: "",
-          phoneNumber: "",
-          interest: ""
-        });
         setIsSubmitting(false);
         setErrors({});
+        setFormResetting(true);
+        setTimeout(() => {
+          setFormData(initialFormData);
+          setFormResetting(false);
+        }, 5000);
       })
       .catch((err) => {
         const formErrors: Record<string, string> = {};
@@ -95,7 +98,6 @@ export default function Form({ onSubmit = () => {} }: FormProps) {
         setIsSubmitting(false);
       });
   }
-  
 
   return (
     <form className="" onSubmit={handleFormSubmit}>
@@ -132,7 +134,7 @@ export default function Form({ onSubmit = () => {} }: FormProps) {
       {errors.interest && <h5 className='errors'>{errors.interest}</h5>}
       <Button 
         label={isSubmitting ? 'Отправка...' : 'Отправить'} 
-        disabled={isSubmitting} 
+        disabled={isSubmitting || formResetting} 
         className="form__btn rounded-[50px] py-4 md:px-8 md:pl-[204px] md:pr-[204px] mb-[15px]" 
       />
     </form>
