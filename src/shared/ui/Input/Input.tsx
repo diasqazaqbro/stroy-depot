@@ -7,13 +7,14 @@ interface IInput {
   placeholder?: string;
   checked?: boolean;
   value?: string,
+  maxLength?: number;
   onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
 export default function Input(props: IInput) {
-  const { className, type, placeholder, value, onChange, checked } = props
+  const { className, type, placeholder, value, onChange, checked, maxLength } = props
 
   return (
-    <input type={type} value={value} onChange={onChange} checked={checked} className={cn(className, 'input')} placeholder={placeholder} />
+    <input type={type} value={value} onChange={onChange} maxLength={maxLength} checked={checked} className={cn(className, 'input')} placeholder={placeholder} />
   )
 }

@@ -1,15 +1,28 @@
 "use client"
-import { useState } from "react";
+import { parsePhoneNumberFromString } from 'libphonenumber-js';
 import Button from "@/shared/ui/Button/Button";
 import Input from "@/shared/ui/Input/Input";
 import './Form.scss';
 
 export default function Form() {
-  // const [phoneNumber, setPhoneNumber] = useState('');
+  const normalizePhoneNumber = (value: string) => {
+    const phoneNumber = value.replace(/\D/g, '');
 
-  // const handlePhoneNumberChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-  //   phoneNumber(event.target.value)
-  // }
+    const maxLength = 11;
+    const formattedPhoneNumber = phoneNumber.substring(0, maxLength);
+
+    if (!formattedPhoneNumber) return value;
+
+    let formattedValue = `+${formattedPhoneNumber}`;
+
+    const parsedPhoneNumber = parsePhoneNumberFromString(formattedValue);
+
+    if (parsedPhoneNumber && parsedPhoneNumber.isValid()) {
+      formattedValue = parsedPhoneNumber.formatInternational();
+    }
+
+    return formattedValue;
+  }
 
   return (
     <form className="">
@@ -18,10 +31,12 @@ export default function Form() {
       </div>
       <div className="input__inner mb-[15px] rounded-[50px]">
         <Input 
-          placeholder="+ 7 (XXX) XXX XX XX" 
+          placeholder="+7 (XXX) XXX XX XX" 
           type="tel" 
-          // value={phoneNumber} 
-          // onChange={handlePhoneNumberChange} 
+          maxLength={16}
+          onChange={(event) => {
+            event.target.value = normalizePhoneNumber(event.target.value);
+          }}
         />
       </div>
       <div className="input__inner mb-[15px] rounded-[50px]">
