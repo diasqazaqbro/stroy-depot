@@ -36,7 +36,7 @@ const initialFormData: FormData = {
   interest: ""
 };
 
-export default function Form({ onSubmit = () => {} }: FormProps) { 
+export default function Form({ onSubmit = () => {} }: FormProps) {
   const [formData, setFormData] = useState<FormData>(initialFormData);
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -57,55 +57,47 @@ export default function Form({ onSubmit = () => {} }: FormProps) {
 
   const handlePhoneNumberChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const formattedValue = normalizePhoneNumber(event.target.value);
-    setFormData({
-      ...formData,
-      phoneNumber: formattedValue
-    });
+    setFormData({ ...formData, phoneNumber: formattedValue });
   }
 
   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = event.target;
-    setFormData({
-      ...formData,
-      [name]: value
-    });
+    setFormData({ ...formData, [name]: value });
   }
 
-  const handleFormSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+  const handleFormSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    setIsSubmitting(!isSubmitting);
-    schema.validate(formData, { abortEarly: false })
-      .then(() => {
-        onSubmit(formData);
+    setIsSubmitting(true);
+    try {
+      const validationError = await schema.validate(formData, { abortEarly: false });
+      onSubmit(formData);
+      setErrors({});
+      setFormResetting(true);
+      setTimeout(() => {
+        setFormData(initialFormData);
         setIsSubmitting(false);
-        setErrors({});
-        setFormResetting(true);
-        setTimeout(() => {
-          setFormData(initialFormData);
-          setIsSubmitting(false);
-          setFormResetting(false);
-        }, 5000);
-      })
-      .catch((err) => {
+        setFormResetting(false);
+      }, 5000);
+    } catch (err) {
+      if (err instanceof yup.ValidationError) {
         const formErrors: Record<string, string> = {};
         err.inner.forEach((error: yup.ValidationError) => {
-          if (error.path) {
-            formErrors[error.path] = error.message;
-          } else {
-            console.error("Validation error path is undefined:", error);
-          }
+          if (error.path) formErrors[error.path] = error.message;
         });
         setErrors(formErrors);
         setIsSubmitting(false);
-      });
+      } else {
+        console.error("Validation error:", err);
+      }
+    }
   }
 
   return (
     <form className="" onSubmit={handleFormSubmit}>
       <div className="input__inner mb-[15px] rounded-[50px]">
-        <Input 
-          placeholder="Как к вам обращаться" 
-          type="text" 
+        <Input
+          placeholder="Как к вам обращаться"
+          type="text"
           name="name"
           disabled={formResetting}
           value={formData.name}
@@ -114,9 +106,9 @@ export default function Form({ onSubmit = () => {} }: FormProps) {
       </div>
       {errors.name && <h5 className='errors'>{errors.name}</h5>}
       <div className="input__inner mb-[15px] rounded-[50px]">
-        <Input 
-          placeholder="+7 (XXX) XXX XX XX" 
-          type="tel" 
+        <Input
+          placeholder="+7 (XXX) XXX XX XX"
+          type="tel"
           maxLength={16}
           disabled={formResetting}
           name="phoneNumber"
@@ -126,9 +118,9 @@ export default function Form({ onSubmit = () => {} }: FormProps) {
       </div>
       {errors.phoneNumber && <h5 className='errors'>{errors.phoneNumber}</h5>}
       <div className="input__inner mb-[15px] rounded-[50px]">
-        <Input 
-          placeholder="Что вас интересует?" 
-          type="text" 
+        <Input
+          placeholder="Что вас интересует?"
+          type="text"
           name="interest"
           disabled={formResetting}
           value={formData.interest}
@@ -136,10 +128,10 @@ export default function Form({ onSubmit = () => {} }: FormProps) {
         />
       </div>
       {errors.interest && <h5 className='errors'>{errors.interest}</h5>}
-      <Button 
-        label={isSubmitting ? 'Отправка...' : 'Отправить'} 
-        disabled={isSubmitting || formResetting} 
-        className="form__btn rounded-[50px] py-4 md:px-8 md:pl-[204px] md:pr-[204px] mb-[15px]" 
+      <Button
+        label={isSubmitting ? 'Отправка...' : 'Отправить'}
+        disabled={isSubmitting || formResetting}
+        className="form__btn rounded-[50px] py-4 md:px-8 md:pl-[204px] md:pr-[204px] mb-[15px]"
       />
     </form>
   )
