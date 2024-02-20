@@ -1,6 +1,5 @@
 import * as React from "react"
 
-// import { Card, CardContent } from "@/components/ui/card"
 import {
   Carousel,
   CarouselContent,
@@ -19,6 +18,10 @@ export default function CarouselSpacing() {
       }}
       className="w-full max-w-2xl carousel__inner"
     >
+      <div className="carousel__btn-desktop">
+        <CarouselPrevious className="carousel__slide" />
+        <CarouselNext className="carousel__slide next" />
+      </div>
       <CarouselContent>
         {Array.from({ length: 10 }).map((_, index) => (
           <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
@@ -28,7 +31,7 @@ export default function CarouselSpacing() {
           </CarouselItem>
         ))}
       </CarouselContent>
-      <div className="carousel__btn">
+      <div className="carousel__btn-mobile">
         <CarouselPrevious className="carousel__slide" />
         <CarouselNext className="carousel__slide next" />
       </div>
