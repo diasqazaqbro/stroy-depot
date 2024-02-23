@@ -35,7 +35,6 @@ export default function CarouselSpacing() {
         <CarouselPrevious className="carousel__slide" />
         <CarouselNext className="carousel__slide next" />
       </div>
-      
     </Carousel>
   )
 }
