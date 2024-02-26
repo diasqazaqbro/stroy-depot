@@ -1,3 +1,4 @@
+'use client'
 import ProductList from "@/entities/ProductList/ui/ProdutctList"
 import ProductFilter from "@/widgets/Products/ui/Products"
 

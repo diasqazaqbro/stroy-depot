@@ -25,7 +25,7 @@ export default function CatalogList() {
   return (
     <div className='catalog__grid grid pt-5'>
       {data.map(({ id, name, icon, className }) => (
-        <Link href={'/product'} key={id} className='catalog__item rounded-[15px] pt-2.5 pb-5'>
+        <Link href={`/catalogs/${encodeURIComponent(id)}`} key={id} className='catalog__item rounded-[15px] pt-2.5 pb-5'>
           <div className='flex justify-center items-center'>
             {icon}
           </div>
