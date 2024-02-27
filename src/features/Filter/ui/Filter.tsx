@@ -7,9 +7,9 @@ export default function Filter() {
   const [checkedItems, setCheckedItems] = useState<{ [key: string]: boolean }>({});
 
   const data = [
-    { id: '1', name: 'Двери и окна' },
-    { id: '2', name: 'Стены и фасады' },
-    { id: '3', name: 'Техническое обслуживание и Ремонт', className: 'checkbox__filter w-[40px] h-[33px] mr-2.5 items-center' },
+    { id: '1', name: 'Популярные' },
+    { id: '2', name: 'Сначала дешевые' },
+    { id: '3', name: 'Сначала дорогие', className: 'checkbox__filter w-[35px] h-[33px] mr-2.5 items-center' },
   ];
 
   const handleCheckboxChange = (id: string) => {
