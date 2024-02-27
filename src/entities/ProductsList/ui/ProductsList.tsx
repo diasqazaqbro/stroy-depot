@@ -65,6 +65,7 @@ export default function PopularProductsList() {
                 height={390}
                 alt=""
                 className="object-cover"
+                style={{ width: '100%', height: 'auto'}}
               />
             </div>
             <h2 className="product__name mb-[13px] xl:flex xl:justify-center xl:items-center">
