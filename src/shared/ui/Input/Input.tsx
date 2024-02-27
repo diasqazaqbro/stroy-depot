@@ -1,26 +1,13 @@
+import React from "react";
 import cn from "classnames";
 import './Input.scss';
 
-interface IInput {
+interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
   className?: string;
-  id?: string
-  error?: string;
-  helperText?: string;
-  name?: string;
-  type?: string;
-  placeholder?: string;
-  checked?: boolean;
-  value?: string,
-  pattern?: string;
-  disabled?: boolean;
-  maxLength?: number;
-  onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
-export default function Input(props: IInput) {
-  const { className, type, placeholder, disabled, id, name, value, pattern, onChange, checked, maxLength } = props
+const Input: React.FC<InputProps> = ({ className, ...rest }) => {
+  return <input className={cn(className, 'input')} {...rest} />;
+};
 
-  return (
-    <input type={type} value={value} id={id} disabled={disabled} name={name} onChange={onChange} pattern={pattern} maxLength={maxLength} checked={checked} className={cn(className, 'input')} placeholder={placeholder} />
-  )
-}
+export default Input;

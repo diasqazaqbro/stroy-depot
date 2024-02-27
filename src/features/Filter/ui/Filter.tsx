@@ -13,11 +13,18 @@ export default function Filter() {
   ];
 
   const handleCheckboxChange = (id: string) => {
-    setCheckedItems(prevCheckedItems => ({
-      ...prevCheckedItems,
-      [id]: !prevCheckedItems[id]
-    }));
-  };
+    setCheckedItems((prevCheckedItems) => {
+      const updatedCheckedItems = { [id]: !prevCheckedItems[id] };
+      if (true) { 
+        Object.keys(prevCheckedItems).forEach(key => {
+          if (key !== id) {
+            updatedCheckedItems[key] = false;
+          }
+        });
+      }
+      return updatedCheckedItems;
+    });
+  }
 
   return (
     <ul className="">
