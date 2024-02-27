@@ -7,7 +7,7 @@ export default function PopularProducts() {
     <section className={`${styles.section} container`}>
       <h2 className={`${styles.section__title} mb-[25px]`}>Популярные товары</h2>
       <PopularProductsList />
-      <Link href="/product"><h3 className="md:text-right pt-[50px] font-semibold">Все товары</h3></Link>
+      <Link href="/catalogs"><h3 className="md:text-right pt-[50px] font-semibold">Все товары</h3></Link>
     </section>
   )
 }
