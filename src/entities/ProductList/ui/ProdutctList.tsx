@@ -24,7 +24,7 @@ export default function ProductList() {
       try {
         const productsCollection = collection(db, "products");
         const querySnapshot = await getDocs(productsCollection);
-        const productsDocs = querySnapshot.docs.map((doc) => ({
+        const productsDocs = querySnapshot.docs.map((doc: any) => ({
           id: doc.id,
           ...doc.data(),
         })) as Product[];
