@@ -59,6 +59,7 @@ export default function ProductList() {
               height={300}
               alt="product"
               className="object-cover"
+              style={{ width: "100%", height: "180px" }}
             />
           </div>
           <h3 className="text-center font-semibold flex justify-center items-center pb-6">
