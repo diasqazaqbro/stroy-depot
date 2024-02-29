@@ -34,17 +34,17 @@ export default function Footer() {
           <Logo  />
           <h2 className="font-bold pt-[3px]">STROY DEPOT</h2>
         </div>
-        <h4 className="mt-[86px] white">Название Ип</h4>
+        <h4 className="mt-[120px] white">Название Ип</h4>
         <h4 className="">Всякие сертификаты если есть</h4>
       </div>
       <div className="footer__right lg:flex rounded-[15px] pt-10 pl-[102px] pr-28 pb-12">
         <div className="mr-[187px]">
           <h3 className="right__text mb-5">Навигация</h3>
           <ul className="flex flex-col footer__links">
-            <Link href='#main' className="mb-[15px]">Главная</Link>
-            <Link href='#about' className="mb-[15px]">О компании</Link>
-            <Link href='/catalogs' className="mb-[15px]">Каталог</Link>
-            <Link href='#contacts' className="">Контакты</Link>
+            <Link href='#main' className="mb-[15px] font-medium">Главная</Link>
+            <Link href='#about' className="mb-[15px] font-medium">О компании</Link>
+            <Link href='/catalogs' className="mb-[15px] font-medium">Каталог</Link>
+            <Link href='#contacts' className="font-medium">Контакты</Link>
           </ul>
         </div>
         <div className="">
