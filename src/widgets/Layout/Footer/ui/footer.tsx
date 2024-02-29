@@ -29,12 +29,12 @@ export default function Footer() {
 
   return (
     <footer className="container lg:flex md:mb-[58px]">
-      <div className="footer__left rounded-[15px] pt-10 pb-12 pl-10 pr-[225px] mr-5">
+      <div className="footer__left rounded-[15px] py-12 pl-10 pr-[225px] mr-5">
         <div className="flex">
           <Logo  />
           <h2 className="font-bold pt-[3px]">STROY DEPOT</h2>
         </div>
-        <h4 className="mt-[120px] white">Название Ип</h4>
+        <h4 className="mt-[105px] white">Название Ип</h4>
         <h4 className="">Всякие сертификаты если есть</h4>
       </div>
       <div className="footer__right lg:flex rounded-[15px] pt-10 pl-[102px] pr-28 pb-12">
