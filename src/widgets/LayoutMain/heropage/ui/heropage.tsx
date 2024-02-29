@@ -42,7 +42,7 @@ export default function HeroPage() {
       ))}
       <div className="hero__mobile">
         {data.map(({ title, id, suptitle }) => (
-          <div id="main" key={id}>
+          <div id="main_mobile" key={id}>
             <h1 className="mb-[17px]">{title}</h1>
             <h2>{suptitle}</h2>
             <Company />

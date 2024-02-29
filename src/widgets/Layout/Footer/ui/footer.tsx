@@ -65,7 +65,7 @@ export default function Footer() {
       </div>
 
       {data.map(({ phoneNumber, id, address, workTime }) => (
-        <footer id="contacts" key={id} className="mobile flex">
+        <footer id="contacts_mobile" key={id} className="mobile flex">
           <div className="mobile__footer rounded-[15px] md:flex px-10 py-[34px]">
             <div className="mobile__footer__logo justify-center items-center flex whitespace-nowrap mb-[33.67px]">
               <Logo /> STROY DEPOT

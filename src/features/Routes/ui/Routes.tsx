@@ -1,11 +1,11 @@
 export const routes = [
   {
     title: "Главная",
-    href: "#main",
+    href: "#main_mobile",
   },
   {
     title: "О компании",
-    href: "#about",
+    href: "#about_mobile",
   },
   {
     title: "Каталог",
@@ -13,6 +13,6 @@ export const routes = [
   },
   {
     title: "Контакты",
-    href: "#contacts",
+    href: "#contacts_mobile",
   },
 ];
