@@ -21,7 +21,7 @@ export default function HeroPage() {
     };
 
     fetchData();
-
+// yield fetchData
     return () => {};
   }, []);
 

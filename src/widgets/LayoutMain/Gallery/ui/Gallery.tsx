@@ -1,6 +1,6 @@
 import CarouselSpacing  from "@/entities/Carousel/ui/Carousel";
 import './Gallery.scss';
-
+// h
 export default function Gallery() {
   return (
     <>
