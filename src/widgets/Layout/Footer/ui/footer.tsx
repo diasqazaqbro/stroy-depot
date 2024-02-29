@@ -30,7 +30,10 @@ export default function Footer() {
   return (
     <footer className="container lg:flex md:mb-[58px]">
       <div className="footer__left rounded-[15px] pt-10 pb-12 pl-10 pr-[225px] mr-5">
-        <h2 className="">Stroy Depot</h2>
+        <div className="flex">
+          <Logo  />
+          <h2 className="font-bold pt-[3px]">STROY DEPOT</h2>
+        </div>
         <h4 className="mt-[86px] white">Название Ип</h4>
         <h4 className="">Всякие сертификаты если есть</h4>
       </div>
