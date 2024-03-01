@@ -86,8 +86,8 @@ export default function Footer() {
             <div className="flex gap-5 mb-10">
               <Insta/> <WhatsApp /> <Telegram />
             </div>
-            <h4 className="white">Название Ип</h4>
-            <h4 className="">Всякие сертификаты если есть</h4>
+            <h4 className="white font-light">Название Ип</h4>
+            <h4 className="font-light">Всякие сертификаты если есть</h4>
           </div>
         </footer>
       ))}

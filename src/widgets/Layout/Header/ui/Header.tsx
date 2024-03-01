@@ -24,7 +24,7 @@ export default function Header({ onClick }: IHeader) {
       <Navbar />
       <div className={`${styles.location} flex flex-col`}>
         <div className='2xl:flex mb-2.5 flex justify-end items-center'>
-          <Position className='mr-[10px] flex items-center' /> <h3 className='font-medium'>г. Алматы</h3>
+          <Position className='relative top-[1.5px] mr-[10px] flex items-center' /> <h3 className='font-medium'>г. Алматы</h3>
         </div>
         <h3 className='font-medium'>+ 7 (777) 123 45 67</h3>
       </div>
