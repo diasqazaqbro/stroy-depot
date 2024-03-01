@@ -52,15 +52,15 @@ export default function SoloProd() {
   }, [id]);
 
   if (loading) {
-    return <div className="text-center text-2xl">Loading...</div>;
+    return <div className="text-center text-2xl font-semibold mt-[-20px]">Loading...</div>;
   }
 
   if (error) {
-    return <div className="text-center text-2xl">Error: {error}</div>;
+    return <div className="text-center text-2xl font-semibold mt-[-20px]">Error: {error}</div>;
   }
 
   if (!data) {
-    return <div>No product found</div>;
+    return <div className="">No product found</div>;
   }
 
   return (
@@ -72,7 +72,7 @@ export default function SoloProd() {
           <Image src={data.image} className="flex justify-center items-center object-contain" alt="Product" width={90} height={423} style={{ width: '100%', height: '423px' }} />
         </div>
         <div className="">
-          <h1 className="mb-[18px] price">{data.price}</h1>
+          <h1 className="mb-[18px] price">{data.price} ₸</h1>
           <Order />
           <h2 className="font-medium mb-[14px]">Описание</h2>
           <h4 className="w-[285px]">{data.description}</h4>
