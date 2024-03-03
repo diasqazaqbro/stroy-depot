@@ -6,6 +6,7 @@ import { useLocation } from "react-use";
 import { useEffect, useState } from "react";
 import { collection, getDocs } from "firebase/firestore/lite";
 import { db } from "@/shared/lib/config";
+import { log } from "console";
 
 export type Product = {
   id: string;
@@ -29,7 +30,6 @@ export default function ProductList() {
           ...doc.data(),
         })) as Product[];
         setProductsList(productsDocs);
-        console.log(productsDocs);
       } catch (error) {
         console.error("Error fetching products:", error);
       }
@@ -43,6 +43,7 @@ export default function ProductList() {
         (product) => `/catalogs/${product.category}` === category
       )
     : productsList;
+  console.log(filteredProductsByCategory);
 
   return (
     <ul className="product__grid grid">
@@ -50,7 +51,7 @@ export default function ProductList() {
         <Link
           href={`/product/${id}`}
           key={id}
-          className="product__item mb-2.5 rounded-[15px] px-[14px] pt-[21px]"
+          className="product__item mb-2.5 rounded-[15px] px-8 pt-[21px]"
         >
           <div className="product__item__image mb-2 py-[22px] px-2.5">
             <Image
@@ -58,7 +59,7 @@ export default function ProductList() {
               width={500}
               height={300}
               alt="product"
-              className="object-cover"
+              className=" object-fill"
               style={{ width: "100%", height: "180px" }}
             />
           </div>

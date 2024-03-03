@@ -10,6 +10,7 @@ import { collection, getDocs } from "firebase/firestore/lite"
 import { db } from "@/shared/lib/config"
 import { Product } from "@/entities/ProductList/ui/ProdutctList"
 import './solo-prod.scss'
+import ReactHtmlParser from "react-html-parser";
 
 interface ProductData extends Product {
   description: string;
@@ -65,8 +66,7 @@ export default function SoloProd() {
 
   return (
     <section className="">
-      <h1 className="mb-[5px]">{data.title}</h1>
-      <h3 className="mb-[35px]">Код товара: {data.code}</h3>
+      <h1 className="mb-5">{data.title}</h1>
       <div className="lg:flex mb-[35px]">
         <div className="mr-[126px] w-[100%] py-8 flex justify-center border-[2px] border-solid border-gray-500 image__product">
           <Image src={data.image} className="flex justify-center items-center object-contain" alt="Product" width={90} height={423} style={{ width: '100%', height: '423px' }} />
@@ -75,12 +75,10 @@ export default function SoloProd() {
           <h1 className="mb-[18px] price">{data.price} ₸</h1>
           <Order />
           <h2 className="font-medium mb-[14px]">Описание</h2>
-          <h4 className="w-[285px]">{data.description}</h4>
+          <h4 className="w-[285px]">{data.code}</h4>
         </div>
       </div>
-      <Use />
-      <Advantages />
-      <Charach />
+      {ReactHtmlParser(data.description)}
     </section>
   );
 }
