@@ -9,7 +9,7 @@ import { db } from "@/shared/lib/config";
 import { Product } from "@/entities/ProductList/ui/ProdutctList";
 
 interface IProduct extends Product {
-  importantProducts: boolean;
+  importasntProducts: boolean;
   time_posted: Timestamp;
 }
 
@@ -45,9 +45,8 @@ export default function PopularProductsList() {
     fetchProducts();
   }, []);
   const importantProducts = productsList
-    ? productsList.filter((product) => product.importantProducts === true)
+    ? productsList.filter((product) => product.importasntProducts === true)
     : productsList;
-  console.log(importantProducts);
 
   return (
     <ul className="products lg:flex lg:px-0 px-7">

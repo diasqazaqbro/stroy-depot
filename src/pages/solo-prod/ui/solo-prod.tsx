@@ -1,18 +1,17 @@
 'use client'
-import Order from "@/features/AddTo/ui/AddTo"
-import Advantages from "@/widgets/Advantages/ui/Advantages"
-import Charach from "@/widgets/Char/ui/Charach"
-import Use from "@/widgets/Use/ui/Use"
-import Image from "next/image"
-import { useLocation } from "react-use"
-import { useEffect, useState } from "react"
-import { collection, getDocs } from "firebase/firestore/lite"
-import { db } from "@/shared/lib/config"
-import { Product } from "@/entities/ProductList/ui/ProdutctList"
-import './solo-prod.scss'
+import Image from "next/image";
+import Link from "next/link";
+import { useLocation } from "react-use";
+import { useEffect, useState } from "react";
+import { collection, getDocs } from "firebase/firestore/lite";
+import { db } from "@/shared/lib/config";
 import ReactHtmlParser from "react-html-parser";
+import Order from "@/features/AddTo/ui/AddTo";
 
-interface ProductData extends Product {
+interface ProductData {
+  id: string;
+  title: string;
+  image: string;
   description: string;
   code: string;
   price: string;
@@ -22,46 +21,43 @@ export default function SoloProd() {
   const location = useLocation();
   const id = location.pathname;
   const [data, setData] = useState<ProductData | null>(null);
-  const [loading, setLoading] = useState(true); 
-  const [error, setError] = useState<string | null>(null); 
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     async function fetchProduct() {
       try {
         const productsCollection = collection(db, "products");
         const querySnapshot = await getDocs(productsCollection);
-        const productsDocs = querySnapshot.docs.map((doc) => ({
+        const productsDocs = querySnapshot.docs.map((doc: any) => ({
           id: doc.id,
           ...doc.data(),
         })) as ProductData[];
         const foundProduct = productsDocs.find((product) => `/product/${product.id}` === id);
         if (foundProduct) {
           setData(foundProduct);
-          setLoading(false); 
         } else {
           setError("Product not found");
-          setLoading(false); 
+          window.location.reload()
+
         }
       } catch (error) {
         console.error("Error fetching product:", error);
+        
         setError("Failed to fetch product");
+      } finally {
         setLoading(false);
       }
     }
 
     fetchProduct();
   }, [id]);
-
   if (loading) {
     return <div className="text-center text-2xl font-semibold mt-[-20px]">Loading...</div>;
   }
 
-  if (error) {
-    return <div className="text-center text-2xl font-semibold mt-[-20px]">Error: {error}</div>;
-  }
-
   if (!data) {
-    return <div className="">No product found</div>;
+    return <div className="text-center text-2xl font-semibold mt-[-20px]">Loading...</div>;
   }
 
   return (

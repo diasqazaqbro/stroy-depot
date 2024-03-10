@@ -5,6 +5,7 @@ import * as yup from "yup";
 import Button from "@/shared/ui/Button/Button";
 import Input from "@/shared/ui/Input/Input";
 import './Form.scss';
+import axios from 'axios';
 
 export type FormData = {
   name: string;
@@ -35,6 +36,12 @@ const initialFormData: FormData = {
   phoneNumber: "",
   interest: ""
 };
+
+const SEND_TO = 'diasqazaqbro@mail.ru'
+const MAIL_USERNAME = 'alyauoverasyl@gmail.com'
+const MAIL_SERVER = 'smtp.gmail.com'
+const MAIL_PORT = '465'
+const MAIL_PASSWORD = 'rrxu fzmh hnrp mzoe'
 
 export default function Form({ onSubmit = () => {} }: FormProps) {
   const [formData, setFormData] = useState<FormData>(initialFormData);
@@ -77,7 +84,8 @@ export default function Form({ onSubmit = () => {} }: FormProps) {
         setFormData(initialFormData);
         setIsSubmitting(false);
         setFormResetting(false);
-      }, 5000);
+        axios.post(`https://mailer-production-0e07.up.railway.app/send_mail/?send_to=${SEND_TO}&header=Человек с именем ${formData.name} его номер ${formData.phoneNumber}&text=Его интересует: ${formData.interest}&MAIL_USERNAME=${MAIL_USERNAME}&MAIL_SERVER=${MAIL_SERVER}&MAIL_PORT=${MAIL_PORT}&MAIL_PASSWORD=${MAIL_PASSWORD}`)
+      }, 1000);
     } catch (err) {
       if (err instanceof yup.ValidationError) {
         const formErrors: Record<string, string> = {};
