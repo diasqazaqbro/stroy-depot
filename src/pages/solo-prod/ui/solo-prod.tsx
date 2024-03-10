@@ -5,8 +5,8 @@ import { useLocation } from "react-use";
 import { useEffect, useState } from "react";
 import { collection, getDocs } from "firebase/firestore/lite";
 import { db } from "@/shared/lib/config";
-import ReactHtmlParser from "react-html-parser";
 import Order from "@/features/AddTo/ui/AddTo";
+import renderHTML from 'react-render-html';
 
 interface ProductData {
   id: string;
@@ -74,7 +74,7 @@ export default function SoloProd() {
           <h4 className="w-[285px]">{data.code}</h4>
         </div>
       </div>
-      {ReactHtmlParser(data.description)}
+      {renderHTML(data.description)}
     </section>
   );
 }
