@@ -1,31 +1,14 @@
-"use client"
-import { useState } from 'react';
+import React from 'react';
 import Input from "@/shared/ui/Input/Input";
 import './Filter.scss';
 
-export default function Filter() {
-  const [checkedItems, setCheckedItems] = useState<{ [key: string]: boolean }>({});
+interface FilterProps {
+  data: { name: string; className?: string; id: string }[];
+  checkedItems: { [key: string]: boolean };
+  handleCheckboxChange: (id: string) => void;
+}
 
-  const data = [
-    { id: '1', name: 'Популярные' },
-    { id: '2', name: 'Сначала дешевые' },
-    { id: '3', name: 'Сначала дорогие', className: 'checkbox__filter w-[35px] h-[33px] mr-2.5 items-center' },
-  ];
-
-  const handleCheckboxChange = (id: string) => {
-    setCheckedItems((prevCheckedItems) => {
-      const updatedCheckedItems = { [id]: !prevCheckedItems[id] };
-      if (true) { 
-        Object.keys(prevCheckedItems).forEach(key => {
-          if (key !== id) {
-            updatedCheckedItems[key] = false;
-          }
-        });
-      }
-      return updatedCheckedItems;
-    });
-  }
-
+const Filter: React.FC<FilterProps> = ({ data, checkedItems, handleCheckboxChange }) => {
   return (
     <ul className="">
       {data.map(({ name, className, id }) => (
@@ -44,3 +27,5 @@ export default function Filter() {
     </ul>
   );
 }
+
+export default Filter;

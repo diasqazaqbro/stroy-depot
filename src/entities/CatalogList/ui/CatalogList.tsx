@@ -16,10 +16,10 @@ export default function CatalogList() {
     { id: '2', name: 'Пено-клеи', icon: <FoamGlue />, className: 'text-center font-medium mt-[15px] px-5' },
     { id: '3', name: 'Силиконовые герметики', icon: <SiliconeSealants />, className: 'whitespace-normal text-center font-medium mt-[15px] px-5' },
     { id: '4', name: 'Монтажные клеи', icon: <AssemblyAdhesives />, className: 'text-center font-medium mt-[15px] px-5' },
-    { id: '5', name: 'Краски аэрозольные', icon: <AerosolPaints />, className: 'text-center font-medium mt-[15px] px-5' },
-    { id: '6', name: 'Затирка для швов', icon: <GroutForSeams />, className: 'text-center font-medium mt-[15px] px-5' },
+    // { id: '5', name: 'Краски аэрозольные', icon: <AerosolPaints />, className: 'text-center font-medium mt-[15px] px-5' },
+    // { id: '6', name: 'Затирка для швов', icon: <GroutForSeams />, className: 'text-center font-medium mt-[15px] px-5' },
     { id: '7', name: 'Обойные клеи', icon: <WallpaperAdhesives />, className: 'text-center font-medium mt-[15px] px-5' },
-    { id: '8', name: 'Разное', icon: <Miscellaneous />, className: 'text-center mt-[15px] font-medium' },
+    // { id: '8', name: 'Разное', icon: <Miscellaneous />, className: 'text-center mt-[15px] font-medium' },
   ];
 
   return (

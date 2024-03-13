@@ -6,7 +6,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { Timestamp, collection, getDocs } from "firebase/firestore/lite";
 import { db } from "@/shared/lib/config";
-import { Product } from "@/entities/ProductList/ui/ProdutctList";
+import { Product } from "@/pages/products/ui/products";
 
 interface IProduct extends Product {
   importasntProducts: boolean;
@@ -15,12 +15,7 @@ interface IProduct extends Product {
 
 export default function PopularProductsList() {
   const [productsList, setProductsList] = useState<IProduct[]>([]); // Устанавливаем тип для списка продуктов
-  const data = [
-    { id: "1", name: "Ultra Fast 70", image: "/UltraFast700.png" },
-    { id: "2", name: "EURO Клей", image: "/Euro.png" },
-    { id: "3", name: "Ultra Fast 70", image: "/UltraFast70.png" },
-    { id: "4", name: "Ultra Fast 70", image: "/2UltraFast70.png" },
-  ];
+
 
   useEffect(() => {
     async function fetchProducts() {
@@ -49,25 +44,20 @@ export default function PopularProductsList() {
     : productsList;
 
   return (
-    <ul className="products lg:flex lg:px-0 px-7">
+    <ul className="products lg:flex lg:px-0 px-7 justify-between">
       {importantProducts.map(({ id, title, image }, index) => (
         <Link href={`/product/${id}`} key={id}>
           <li
-            className={`product ${
-              index !== data.length - 1 ? "md:mr-5" : ""
-            } rounded-[15px] ${index === data.length - 1 ? "mr-0" : ""}`}
+            className={`product w-[90%] h-[450px]`}
           >
-            <div className="products__image p-5 mb-2.5 flex justify-center items-center">
-              <Image
+            <div className="products__image flex justify-center p-5 mb-2.5">
+              <img
                 src={image}
-                width={200}
-                height={390}
                 alt=""
-                className="object-cover"
-                style={{ width: '100%', height: 'auto'}}
+                className="object-cover h-[200px]"
               />
             </div>
-            <h2 className="product__name mb-[13px] xl:flex xl:justify-center xl:items-center">
+            <h2 className="product__name mb-[13px] text-xl xl:flex xl:justify-center xl:items-center">
               {title}
             </h2>
             <div className="flex items-center">
