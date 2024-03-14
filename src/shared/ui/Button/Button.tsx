@@ -1,8 +1,10 @@
-"use client";
 import { ReactNode, useEffect, useState } from "react";
-import "./Button.scss";
 import axios from "axios";
 import { BASE_URL } from "@/shared/api/apiBase";
+
+interface PhoneNumberData {
+  phoneNumber: string; 
+}
 
 interface IButton {
   label?: string;
@@ -14,7 +16,7 @@ interface IButton {
 }
 
 export default function Button(props: IButton) {
-  const [number, setNumber] = useState([]);
+  const [number, setNumber] = useState<PhoneNumberData[]>([]);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -30,7 +32,6 @@ export default function Button(props: IButton) {
     return () => {};
   }, []);
 
-  // console.log();
   const { label, className, onClick, children, disabled, isPhone } = props;
 
   return (
@@ -42,8 +43,7 @@ export default function Button(props: IButton) {
         </button>
       ) : (
         <button onClick={onClick} className={className} disabled={disabled}>
-          
-<a href={`tel:${number[0].phoneNumber}`}>{label}</a>          
+          <a href={`tel:${number[0]?.phoneNumber}`}>{label}</a>
         </button>
       )}
     </>
