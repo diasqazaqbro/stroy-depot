@@ -11,6 +11,7 @@ import {
 import './Carousel.scss';
 
 export default function CarouselSpacing() {
+
   return (
     <Carousel
       opts={{
@@ -23,13 +24,22 @@ export default function CarouselSpacing() {
         <CarouselNext className="carousel__slide next" />
       </div>
       <CarouselContent>
-        {Array.from({ length: 10 }).map((_, index) => (
-          <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
-            <div className="p-1 flex">
-              <div className="carousel__inner__inside">IMG</div>
-            </div>
+          <CarouselItem className="md:basis-1/2 lg:basis-1/3">
+            <img className="h-[240px] object-cover" src="https://i.ytimg.com/vi/-1tgphdZSmo/maxresdefault.jpg"/>
           </CarouselItem>
-        ))}
+          <CarouselItem className="md:basis-1/2 lg:basis-1/3">
+            <img className="h-[240px] object-cover" src="https://tytan-professional.ru/wp-content/uploads/41612-TP_Banner-for-Internet_FMS-mob.jpg"/>
+          </CarouselItem>
+          <CarouselItem className="md:basis-1/2 lg:basis-1/3">
+            <img className="h-[240px] object-cover" src="https://rupec.ru/upload/resize_cache/iblock/929/807_414_2/92964cfa805262c6bf4b57e47d877d5c.jpg"/>
+          </CarouselItem>
+          <CarouselItem className="md:basis-1/2 lg:basis-1/3">
+            <img className="h-[240px] object-cover" src="https://tytan-professional.ru/wp-content/uploads/34795V01_TP_Ultrafast70_700x500_RU.jpg"/>
+          </CarouselItem>
+          <CarouselItem className="md:basis-1/2 lg:basis-1/3">
+            <img className="h-[240px] object-cover" src="https://tytan-professional.ru/wp-content/uploads/34797V01_TP_60seconds_700x500_RU_ver_2.jpg"/>
+          </CarouselItem>
+
       </CarouselContent>
       <div className="carousel__btn-mobile">
         <CarouselPrevious className="carousel__slide" />
