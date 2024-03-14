@@ -1,6 +1,5 @@
 'use client'
 import Image from "next/image";
-import Link from "next/link";
 import { useLocation } from "react-use";
 import { useEffect, useState } from "react";
 import { collection, getDocs } from "firebase/firestore/lite";
@@ -23,6 +22,7 @@ export default function SoloProd() {
   const [data, setData] = useState<ProductData | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  
 
   useEffect(() => {
     async function fetchProduct() {
@@ -59,6 +59,9 @@ export default function SoloProd() {
   if (!data) {
     return <div className="text-center text-2xl font-semibold mt-[-20px]">Loading...</div>;
   }
+
+
+  
 
   return (
     <section className="">
